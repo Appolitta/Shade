@@ -1,0 +1,2378 @@
+[
+  {
+    "id": 333,
+    "name": "Fhg",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 348,
+      "address": "Таганрог, Ростовская область 347900",
+      "latitude": 47.2729567,
+      "longitude": 38.9276928
+    },
+    "poster": {
+      "id": 802,
+      "firstName": "Emp",
+      "lastName": "Monday"
+    }
+  },
+  {
+    "id": 332,
+    "name": "Ty",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 347,
+      "address": "Taganrog, Province of Rostov 347900",
+      "latitude": 47.2729567,
+      "longitude": 38.9276928
+    },
+    "poster": {
+      "id": 100,
+      "firstName": "Testovii",
+      "lastName": "Testovii",
+      "ratingInfo": {
+        "rating": 4.0,
+        "numberOfReviews": 6
+      }
+    }
+  },
+  {
+    "id": 331,
+    "name": "Ad info",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 346,
+      "address": "Таганрог, Ростовская область 347900",
+      "latitude": 47.2729567,
+      "longitude": 38.9276928
+    },
+    "poster": {
+      "id": 802,
+      "firstName": "Emp",
+      "lastName": "Monday"
+    }
+  },
+  {
+    "id": 330,
+    "name": "Fjfh",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 345,
+      "address": "Таганрог, Ростовская область 347900",
+      "latitude": 47.2729567,
+      "longitude": 38.9276928
+    },
+    "poster": {
+      "id": 802,
+      "firstName": "Emp",
+      "lastName": "Monday"
+    }
+  },
+  {
+    "id": 329,
+    "name": "Your job has posted",
+    "categoryId": 6,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-delivery-shopping.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 344,
+      "address": "Таганрог, Ростовская область 347900",
+      "latitude": 47.2729567,
+      "longitude": 38.9276928
+    },
+    "poster": {
+      "id": 802,
+      "firstName": "Emp",
+      "lastName": "Monday"
+    }
+  },
+  {
+    "id": 328,
+    "name": "Fmfjgh",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 342,
+      "address": "Taganrog, Province of Rostov 347900",
+      "latitude": 47.2729567,
+      "longitude": 38.9276928
+    },
+    "poster": {
+      "id": 802,
+      "firstName": "Emp",
+      "lastName": "Monday"
+    }
+  },
+  {
+    "id": 327,
+    "name": "AgirllivesnIndia.ShewantstomeetherpotentialhusbandPeopleshowherhisphotoShegoestomeethvv",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 341,
+      "address": "Olenogorsk, Province of Murmansk 184530",
+      "latitude": 68.1458823,
+      "longitude": 33.2644038
+    },
+    "poster": {
+      "id": 802,
+      "firstName": "Emp",
+      "lastName": "Monday"
+    }
+  },
+  {
+    "id": 326,
+    "name": "Jd view check",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 340,
+      "address": "Bol'shaya Izhora, Leningrad 188531",
+      "latitude": 59.9408008,
+      "longitude": 29.5794541
+    },
+    "poster": {
+      "id": 802,
+      "firstName": "Emp",
+      "lastName": "Monday"
+    }
+  },
+  {
+    "id": 325,
+    "name": "Crash on ad info",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 339,
+      "address": "Taganrog, Province of Rostov 347900",
+      "latitude": 47.2729567,
+      "longitude": 38.9276928
+    },
+    "poster": {
+      "id": 802,
+      "firstName": "Emp",
+      "lastName": "Monday"
+    }
+  },
+  {
+    "id": 324,
+    "name": "Monday jd check",
+    "categoryId": 5,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-home.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 338,
+      "address": "Taganrog, Province of Rostov 347939",
+      "latitude": 47.21764,
+      "longitude": 38.85266
+    },
+    "poster": {
+      "id": 802,
+      "firstName": "Emp",
+      "lastName": "Monday"
+    }
+  },
+  {
+    "id": 323,
+    "name": "Monday check",
+    "categoryId": 5,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-home.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 337,
+      "address": "Taganrog, Province of Rostov 347900",
+      "latitude": 47.2729567,
+      "longitude": 38.9276928
+    },
+    "poster": {
+      "id": 802,
+      "firstName": "Emp",
+      "lastName": "Monday"
+    }
+  },
+  {
+    "id": 322,
+    "name": "Gjfj",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 336,
+      "address": "Таганрог, Ростовская область 347900",
+      "latitude": 47.2729567,
+      "longitude": 38.9276928
+    },
+    "poster": {
+      "id": 798,
+      "firstName": "Employer",
+      "lastName": "Friday"
+    }
+  },
+  {
+    "id": 321,
+    "name": "Dhfh",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 335,
+      "address": "Таганрог, Ростовская область 347900",
+      "latitude": 47.2729567,
+      "longitude": 38.9276928
+    },
+    "poster": {
+      "id": 798,
+      "firstName": "Employer",
+      "lastName": "Friday"
+    }
+  },
+  {
+    "id": 320,
+    "name": "Ad info",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 334,
+      "address": "Таганрог, Ростовская область 347900",
+      "latitude": 47.2729567,
+      "longitude": 38.9276928
+    },
+    "poster": {
+      "id": 798,
+      "firstName": "Employer",
+      "lastName": "Friday"
+    }
+  },
+  {
+    "id": 319,
+    "name": "Klisy",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 333,
+      "address": "Marushkinskoye, Moscow ",
+      "latitude": 55.5764,
+      "longitude": 37.2656899
+    },
+    "poster": {
+      "id": 794,
+      "firstName": "Emp",
+      "lastName": "Emp"
+    }
+  },
+  {
+    "id": 318,
+    "name": "Another try",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 332,
+      "address": ", Province of Kemerovo ",
+      "latitude": 52.9134,
+      "longitude": 87.483
+    },
+    "poster": {
+      "id": 798,
+      "firstName": "Employer",
+      "lastName": "Friday"
+    }
+  },
+  {
+    "id": 317,
+    "name": "Fjfj",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 331,
+      "address": "Taganrog, Province of Rostov 347900",
+      "latitude": 47.2729567,
+      "longitude": 38.9276928
+    },
+    "poster": {
+      "id": 798,
+      "firstName": "Employer",
+      "lastName": "Friday"
+    }
+  },
+  {
+    "id": 316,
+    "name": "AgirllivesnIndia.Shewantstomeetherpotentialhusband.Peopleshowherhisphoto.Shegoestomeethim.Heisnotthb",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 330,
+      "address": "Taganrog, Province of Rostov 347900",
+      "latitude": 47.2729567,
+      "longitude": 38.9276928
+    },
+    "poster": {
+      "id": 798,
+      "firstName": "Employer",
+      "lastName": "Friday"
+    }
+  },
+  {
+    "id": 315,
+    "name": "Fhgug",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 329,
+      "address": "Taganrog, Province of Rostov 347939",
+      "latitude": 47.21764,
+      "longitude": 38.85266
+    },
+    "poster": {
+      "id": 798,
+      "firstName": "Employer",
+      "lastName": "Friday"
+    }
+  },
+  {
+    "id": 314,
+    "name": "Photo check",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 328,
+      "address": "Рязань, Рязанская область 390039",
+      "latitude": 54.6780811,
+      "longitude": 39.6538686
+    },
+    "poster": {
+      "id": 799,
+      "firstName": "FYI",
+      "lastName": "Dry"
+    }
+  },
+  {
+    "id": 313,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 327,
+      "address": "string",
+      "latitude": 1.0,
+      "longitude": 1.0
+    },
+    "poster": {
+      "id": 2,
+      "firstName": "Nill",
+      "lastName": "Hates",
+      "ratingInfo": {
+        "rating": 4.0,
+        "numberOfReviews": 1
+      }
+    }
+  },
+  {
+    "id": 312,
+    "name": "Nekrasovskij",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 326,
+      "address": "Taganrog, Province of Rostov 347922",
+      "latitude": 47.20155,
+      "longitude": 38.94036
+    },
+    "poster": {
+      "id": 798,
+      "firstName": "Employer",
+      "lastName": "Friday"
+    }
+  },
+  {
+    "id": 311,
+    "name": "Job friday",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 325,
+      "address": "Taganrog, Province of Rostov 347900",
+      "latitude": 47.2729567,
+      "longitude": 38.9276928
+    },
+    "poster": {
+      "id": 798,
+      "firstName": "Employer",
+      "lastName": "Friday"
+    }
+  },
+  {
+    "id": 310,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 324,
+      "address": "string",
+      "latitude": 1.0,
+      "longitude": 1.0
+    },
+    "poster": {
+      "id": 2,
+      "firstName": "Nill",
+      "lastName": "Hates",
+      "ratingInfo": {
+        "rating": 4.0,
+        "numberOfReviews": 1
+      }
+    }
+  },
+  {
+    "id": 309,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 323,
+      "address": "string",
+      "latitude": 1.0,
+      "longitude": 1.0
+    },
+    "poster": {
+      "id": 2,
+      "firstName": "Nill",
+      "lastName": "Hates",
+      "ratingInfo": {
+        "rating": 4.0,
+        "numberOfReviews": 1
+      }
+    }
+  },
+  {
+    "id": 308,
+    "name": "TestFeedJob",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 322,
+      "address": "string",
+      "latitude": 0.0,
+      "longitude": 0.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 307,
+    "name": "TEST_FEED_JOB",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 321,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 305,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 319,
+      "address": "string",
+      "latitude": 1.0,
+      "longitude": 1.0
+    },
+    "poster": {
+      "id": 2,
+      "firstName": "Nill",
+      "lastName": "Hates",
+      "ratingInfo": {
+        "rating": 4.0,
+        "numberOfReviews": 1
+      }
+    }
+  },
+  {
+    "id": 304,
+    "name": "Forth job",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 316,
+      "address": "Saint Petersburg, Saint Petersburg 198330",
+      "latitude": 59.8518146,
+      "longitude": 30.1994226
+    },
+    "poster": {
+      "id": 764,
+      "firstName": "Steve",
+      "lastName": "Jobs"
+    }
+  },
+  {
+    "id": 303,
+    "name": "Third job",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 315,
+      "address": "Saint Petersburg, Saint Petersburg 198330",
+      "latitude": 59.8518146,
+      "longitude": 30.1994226
+    },
+    "poster": {
+      "id": 764,
+      "firstName": "Steve",
+      "lastName": "Jobs"
+    }
+  },
+  {
+    "id": 302,
+    "name": "Second job",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 314,
+      "address": "Saint Petersburg, Saint Petersburg 198330",
+      "latitude": 59.8518146,
+      "longitude": 30.1994226
+    },
+    "poster": {
+      "id": 764,
+      "firstName": "Steve",
+      "lastName": "Jobs"
+    }
+  },
+  {
+    "id": 301,
+    "name": "First job",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "301-57d82eda-faaf-4dd0-8f59-a5e4ae7b8efc.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 313,
+      "address": "Saint Petersburg, Saint Petersburg 198330",
+      "latitude": 59.8518146,
+      "longitude": 30.1994226
+    },
+    "poster": {
+      "id": 764,
+      "firstName": "Steve",
+      "lastName": "Jobs"
+    }
+  },
+  {
+    "id": 298,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 310,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 297,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 309,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 296,
+    "name": "Singer for Margo's birthday ",
+    "categoryId": 4,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-services.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 308,
+      "address": "Saint Petersburg, Saint Petersburg 194017",
+      "latitude": 60.0172401,
+      "longitude": 30.3222606
+    },
+    "poster": {
+      "id": 94,
+      "firstName": "Scott",
+      "lastName": "Ryder",
+      "ratingInfo": {
+        "rating": 5.0,
+        "numberOfReviews": 1
+      }
+    }
+  },
+  {
+    "id": 295,
+    "name": "Testing 3d touch peek preview with long job title",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 307,
+      "address": "Taganrog, Province of Rostov 347900",
+      "latitude": 47.2729567,
+      "longitude": 38.9276928
+    },
+    "poster": {
+      "id": 71,
+      "firstName": "James",
+      "lastName": "Bond",
+      "ratingInfo": {
+        "rating": 4.0,
+        "numberOfReviews": 6
+      }
+    }
+  },
+  {
+    "id": 294,
+    "name": "Testing 3d touch peek preview",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "294-15cc65bc-5e07-4b34-b5f2-30cfe499cd09.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 306,
+      "address": "Taganrog, Province of Rostov 347900",
+      "latitude": 47.2729567,
+      "longitude": 38.9276928
+    },
+    "poster": {
+      "id": 71,
+      "firstName": "James",
+      "lastName": "Bond",
+      "ratingInfo": {
+        "rating": 4.0,
+        "numberOfReviews": 6
+      }
+    }
+  },
+  {
+    "id": 290,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 302,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 289,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 301,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 288,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 300,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 287,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 299,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 286,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 298,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 285,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 297,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 284,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 296,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 283,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 295,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 282,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 294,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 281,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 293,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 280,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 292,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 279,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 291,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 278,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 290,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 277,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 289,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 276,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 288,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 275,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 287,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 274,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 286,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 273,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 285,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 272,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 284,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 271,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 283,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 270,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 282,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 269,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 281,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 268,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 280,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 267,
+    "name": "Tst",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 279,
+      "address": "Moscow, Moscow 111141",
+      "latitude": 55.7491498,
+      "longitude": 37.7760762
+    },
+    "poster": {
+      "id": 71,
+      "firstName": "James",
+      "lastName": "Bond",
+      "ratingInfo": {
+        "rating": 4.0,
+        "numberOfReviews": 6
+      }
+    }
+  },
+  {
+    "id": 266,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 278,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 265,
+    "name": "Flsdkjfg",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 276,
+      "address": "Saint Petersburg, Saint Petersburg 198330",
+      "latitude": 59.8518146,
+      "longitude": 30.1994226
+    },
+    "poster": {
+      "id": 172,
+      "firstName": "John",
+      "lastName": "Employer"
+    }
+  },
+  {
+    "id": 264,
+    "name": "dfl;g;fdg",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 275,
+      "address": "Санкт-Петербург, Санкт-Петербург 198330",
+      "latitude": 59.8518146,
+      "longitude": 30.1994226
+    },
+    "poster": {
+      "id": 172,
+      "firstName": "John",
+      "lastName": "Employer"
+    }
+  },
+  {
+    "id": 263,
+    "name": "reldlfgkdg",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 274,
+      "address": "Санкт-Петербург, Санкт-Петербург 198330",
+      "latitude": 59.8518146,
+      "longitude": 30.1994226
+    },
+    "poster": {
+      "id": 172,
+      "firstName": "John",
+      "lastName": "Employer"
+    }
+  },
+  {
+    "id": 262,
+    "name": "bmoaisdd",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 273,
+      "address": "Санкт-Петербург, Санкт-Петербург 198330",
+      "latitude": 59.8518146,
+      "longitude": 30.1994226
+    },
+    "poster": {
+      "id": 172,
+      "firstName": "John",
+      "lastName": "Employer"
+    }
+  },
+  {
+    "id": 261,
+    "name": "ndsfgj",
+    "categoryId": 2,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-media-tech.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 272,
+      "address": "Санкт-Петербург, Санкт-Петербург 198330",
+      "latitude": 59.8518146,
+      "longitude": 30.1994226
+    },
+    "poster": {
+      "id": 172,
+      "firstName": "John",
+      "lastName": "Employer"
+    }
+  },
+  {
+    "id": 260,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 271,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 259,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 270,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 258,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 269,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 257,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 268,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 256,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 267,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 255,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 266,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 254,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 265,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 253,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 264,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 252,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 263,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 251,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 262,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 250,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 261,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 249,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 260,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 248,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 259,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 247,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 258,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 246,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 257,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 245,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 256,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 244,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 255,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 243,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 254,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 242,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 253,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 241,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 252,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 240,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 251,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 239,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 250,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 238,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 249,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 237,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 248,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 236,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 247,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 235,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 246,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 234,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 245,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 233,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 244,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 232,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 243,
+      "address": "string",
+      "latitude": 0.0,
+      "longitude": 0.0
+    },
+    "poster": {
+      "id": 167,
+      "firstName": "string",
+      "lastName": "string"
+    }
+  },
+  {
+    "id": 231,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 242,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 230,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 241,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 229,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "1-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 240,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  },
+  {
+    "id": 228,
+    "name": "string",
+    "categoryId": 1,
+    "logoUrl": {
+      "urlToFolder": "https://s3-us-west-2.amazonaws.com/dev-bucket-shade/jobLogos",
+      "fileName": "2-default-business-finance.png"
+    },
+    "isSaved": false,
+    "location": {
+      "id": 239,
+      "address": "ololo",
+      "latitude": 15.0,
+      "longitude": 15.0
+    },
+    "poster": {
+      "id": 110,
+      "firstName": "Ivan-new",
+      "lastName": "Ivanov-new",
+      "ratingInfo": {
+        "rating": 2.8,
+        "numberOfReviews": 17
+      }
+    }
+  }
+]
