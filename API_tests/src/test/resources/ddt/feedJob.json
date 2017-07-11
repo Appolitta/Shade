@@ -1,0 +1,93 @@
+[
+
+  {
+    "description": "Feed job",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "userId": 110,
+    "dto":
+    {
+      "searchingPhrase":"TestFeedJob"
+    }
+  },
+
+  {
+    "description": "Feed job",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "userId": 110,
+    "dto":
+    {
+      "searchingPhrase":"TestFeedJob2"
+    }
+  },
+
+  {
+    "description": "Feed job",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "userId": 110,
+    "dto":
+    {
+      "categoryId": "1"
+    }
+  },
+
+  {
+    "description": "Feed job",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "userId": 110,
+    "dto":
+    {
+      "startDate": "07.04.2017"
+    }
+  },
+
+
+  {
+    "description": "Feed job",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "userId": 110,
+    "dto":
+    {
+      "salaryMin": "10"
+    }
+  },
+
+  {
+    "description": "Feed job ",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "userId": 110,
+    "dto":
+    {
+      "recordsCount": "1"
+    }
+  },
+
+  {
+    "description": "Feed job",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "userId": 110,
+    "dto":
+    {
+      "maxId": "1000"
+    }
+  },
+
+  {
+    "description": "Feed job",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "userId": 110,
+    "dto":
+    {
+      "sinceId": "1"
+    }
+  }
+
+
+]

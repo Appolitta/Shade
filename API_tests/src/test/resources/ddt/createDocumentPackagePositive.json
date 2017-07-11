@@ -1,0 +1,39 @@
+[
+  {
+    "setId": 1,
+    "description": "Create package without initial values.",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "dto": {
+      "id": null,
+      "name": null,
+      "withoutCoveringLetter": null,
+      "coveringLetterIncomingNumber": null,
+      "coveringLetterIncomingDate": null,
+      "coveringLetterOutgoingNumber": null,
+      "coveringLetterOutgoingDate": null,
+      "documentPackageSourceId": null,
+      "organizationId": null,
+      "returnDocOrganizationId": null
+    }
+  },
+
+  {
+    "setId": 2,
+    "description": "Create package only with name",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "dto": {
+      "id": null,
+      "name": "Test document package name.",
+      "withoutCoveringLetter": null,
+      "coveringLetterIncomingNumber": null,
+      "coveringLetterIncomingDate": null,
+      "coveringLetterOutgoingNumber": null,
+      "coveringLetterOutgoingDate": null,
+      "documentPackageSourceId": null,
+      "organizationId": null,
+      "returnDocOrganizationId": null
+    }
+  }
+]

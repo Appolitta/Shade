@@ -1,0 +1,14 @@
+[
+  {
+    "description": "Login with the correct data",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "dto":
+    {
+      "email": "test_twise_user@distillery.com",
+      "password": "qqqaaa77"
+
+    }
+  }
+
+]

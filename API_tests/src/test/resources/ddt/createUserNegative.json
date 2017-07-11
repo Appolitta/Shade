@@ -1,0 +1,371 @@
+[
+  {
+    "description": "Create user with incorrect data: userType - 1",
+    "testCaseId": 0,
+    "statusCode": 400,
+    "dto":
+    {
+      "email": "test_user@distillery.com",
+      "password": "qqqaaa77",
+      "firstName": "test",
+      "lastName": "user",
+      "userType": 1,
+      "errorCode": 510,
+      "errorMessage": "The request is invalid.",
+      "invalidFields":["UserType"]
+    }
+  },
+
+  {
+    "description": "Create user with incorrect data: email - @distillery.com",
+    "testCaseId": 0,
+    "statusCode": 400,
+    "dto":
+    {
+      "email": "@distillery.com",
+      "password": "qqqaaa77",
+      "firstName": "Anna",
+      "lastName": "Varetsa",
+      "userType": 2,
+      "errorCode": 510,
+      "errorMessage": "The request is invalid.",
+      "invalidFields":["Email"]
+    }
+  },
+
+  {
+    "description": "Create user with incorrect data: email - @distillery.com",
+    "testCaseId": 0,
+    "statusCode": 400,
+    "dto":
+    {
+      "email": "@distillery.com",
+      "password": "qqqaaa77",
+      "firstName": "Anna",
+      "lastName": "Varetsa",
+      "userType": 3,
+      "errorCode": 510,
+      "errorMessage": "The request is invalid.",
+      "invalidFields":["Email"]
+    }
+  },
+
+  {
+    "description": "Create user with incorrect data: email - test_user@distillery",
+    "testCaseId": 0,
+    "statusCode": 400,
+    "dto":
+    {
+      "email": "test_user@distillery",
+      "password": "qqqaaa77",
+      "firstName": "User",
+      "lastName": "Test",
+      "userType": 2,
+      "errorCode": 510,
+      "errorMessage": "The request is invalid.",
+      "invalidFields":["Email"]
+    }
+  },
+
+  {
+    "description": "Create user with incorrect data: email - test_user.distillerycom",
+    "testCaseId": 0,
+    "statusCode": 400,
+    "dto":
+    {
+      "email": "test_user.distillery.com",
+      "password": "qqqaaa77",
+      "firstName": "User",
+      "lastName": "Test",
+      "userType": 2,
+      "errorCode": 510,
+      "errorMessage": "The request is invalid.",
+      "invalidFields":["Email"]
+    }
+  },
+
+  {
+    "description": "Create user with incorrect data: email - test_user@distillery",
+    "testCaseId": 0,
+    "statusCode": 400,
+    "dto":
+    {
+      "email": "test_user@distillery",
+      "password": "qqqaaa77",
+      "firstName": "User",
+      "lastName": "Test",
+      "userType": 3,
+      "errorCode": 510,
+      "errorMessage": "The request is invalid.",
+      "invalidFields":["Email"]
+    }
+  },
+
+  {
+    "description": "Create user with incorrect data: email - test_user.distillerycom",
+    "testCaseId": 0,
+    "statusCode": 400,
+    "dto":
+    {
+      "email": "test_user.distillery.com",
+      "password": "qqqaaa77",
+      "firstName": "User",
+      "lastName": "Test",
+      "userType": 3,
+      "errorCode": 510,
+      "errorMessage": "The request is invalid.",
+      "invalidFields":["Email"]
+    }
+  },
+
+  {
+    "description": "Create user with incorrect data: password - qqq",
+    "testCaseId": 0,
+    "statusCode": 400,
+    "dto":
+    {
+      "email": "test_user@distillery.com",
+      "password": "qqq",
+      "firstName": "Anna",
+      "lastName": "Varetsa",
+      "userType": 2,
+      "errorCode": 510,
+      "errorMessage": "The request is invalid.",
+      "invalidFields":["Password"]
+    }
+  },
+
+  {
+    "description": "Create user with incorrect data: password - qqq aaa7",
+    "testCaseId": 0,
+    "statusCode": 400,
+    "dto":
+    {
+      "email": "test_user@distillery.com",
+      "password": "qqq aaa",
+      "firstName": "User",
+      "lastName": "Test",
+      "userType": 2,
+      "errorCode": 510,
+      "errorMessage": "The request is invalid.",
+      "invalidFields":["Password"]
+    }
+  },
+
+  {
+    "description": "Create user with incorrect data: password - ",
+    "testCaseId": 0,
+    "statusCode": 400,
+    "dto":
+    {
+      "email": "test_user@ru.com",
+      "password": "qqqaaa7",
+      "firstName": "User",
+      "lastName": "Test",
+      "userType": 2,
+      "errorCode": 510,
+      "errorMessage": "The request is invalid.",
+      "invalidFields":["Password"]
+    }
+  },
+
+  {
+    "description": "Create user with incorrect data: password - ",
+    "testCaseId": 0,
+    "statusCode": 400,
+    "dto":
+    {
+      "email": "test_user@ru.com",
+      "password": "qqqaaa7",
+      "firstName": "User",
+      "lastName": "Test",
+      "userType": 2,
+      "errorCode": 510,
+      "errorMessage": "The request is invalid.",
+      "invalidFields":["Password"]
+    }
+  },
+
+  {
+    "description": "Create user with incorrect data: password - qqq",
+    "testCaseId": 0,
+    "statusCode": 400,
+    "dto":
+    {
+      "email": "test_user@distillery.com",
+      "password": "qqq",
+      "firstName": "Anna",
+      "lastName": "Varetsa",
+      "userType": 3,
+      "errorCode": 510,
+      "errorMessage": "The request is invalid.",
+      "invalidFields":["Password"]
+    }
+  },
+
+  {
+    "description": "Create user with incorrect data: email - test_user@.com",
+    "testCaseId": 0,
+    "statusCode": 400,
+    "dto":
+    {
+      "email": "test_user@ru.com",
+      "password": "qqqaaa7",
+      "firstName": "User",
+      "lastName": "Test",
+      "userType": 3,
+      "errorCode": 510,
+      "errorMessage": "The request is invalid.",
+      "invalidFields":["Password"]
+    }
+  },
+  {
+    "description": "Create user with incorrect data: password - qqq aaa7",
+    "testCaseId": 0,
+    "statusCode": 400,
+    "dto":
+    {
+      "email": "test_user@distillery.com",
+      "password": "qqqaaa7",
+      "firstName": "User",
+      "lastName": "Test",
+      "userType": 3,
+      "errorCode": 109,
+      "errorMessage": "The request is invalid.",
+      "invalidFields":["Password"]
+    }
+  },
+
+  {
+    "description": "Create user with incorrect data: firstName - User =",
+    "testCaseId": 0,
+    "statusCode": 400,
+    "dto":
+    {
+      "email": "test_user@distillery.com",
+      "password": "qqqaaa77",
+      "firstName": "User =",
+      "lastName": "Test",
+      "userType": 2,
+      "errorCode": 510,
+      "errorMessage": "The request is invalid.",
+      "invalidFields":["FirstName"]
+    }
+  },
+  {
+    "description": "Create user with incorrect data: firstName - User =",
+    "testCaseId": 0,
+    "statusCode": 400,
+    "dto":
+    {
+      "email": "test_user@distillery.com",
+      "password": "qqqaaa77",
+      "firstName": "User =",
+      "lastName": "Test",
+      "userType": 3,
+      "errorCode": 510,
+      "errorMessage": "The request is invalid.",
+      "invalidFields":["FirstName"]
+    }
+  },
+
+  {
+    "description": "Create user with incorrect data: lastName - Test =",
+    "testCaseId": 0,
+    "statusCode": 400,
+    "dto":
+    {
+      "email": "test_user@distillery.com",
+      "password": "qqqaaa77",
+      "firstName": "User",
+      "lastName": "Test =",
+      "userType": 2,
+      "errorCode": 510,
+      "errorMessage": "The request is invalid.",
+      "invalidFields":["LastName"]
+    }
+  },
+
+  {
+    "description": "Create user with incorrect data: email - test_user@.com",
+    "testCaseId": 0,
+    "statusCode": 400,
+    "dto":
+    {
+      "email": "test_user@.com",
+      "password": "qqq",
+      "firstName": "User+",
+      "lastName": "Test+",
+      "userType": 2,
+      "errorCode": 510,
+      "errorMessage": "The request is invalid.",
+      "invalidFields":[ "Email","FirstName", "LastName", "Password"]
+    }
+  },
+  {
+    "description": "Create user with incorrect data: lastName - Test =",
+    "testCaseId": 0,
+    "statusCode": 400,
+    "dto":
+    {
+      "email": "test_user@distillery.com",
+      "password": "qqqaaa77",
+      "firstName": "User",
+      "lastName": "Test =",
+      "userType": 3,
+      "errorCode": 510,
+      "errorMessage": "The request is invalid.",
+      "invalidFields":["LastName"]
+    }
+  },
+  {
+    "description": "Create user with incorrect data: email - test_user@.com",
+    "testCaseId": 0,
+    "statusCode": 400,
+    "dto":
+    {
+      "email": "test_user@.com",
+      "password": "qqq",
+      "firstName": "User+",
+      "lastName": "Test+",
+      "userType": 3,
+      "errorCode": 510,
+      "errorMessage": "The request is invalid.",
+      "invalidFields":["Email","FirstName", "LastName","Password"]
+    }
+  },
+
+  {
+    "description": "Create user with incorrect data: all fields are empty",
+    "testCaseId": 0,
+    "statusCode": 400,
+    "dto":
+    {
+      "email": "",
+      "password": "",
+      "firstName": "",
+      "lastName": "",
+      "userType": null,
+      "errorCode": 510,
+      "errorMessage": "The request is invalid.",
+      "invalidFields":["Email", "Password","FirstName", "LastName", "UserType"]
+    }
+  },
+
+  {
+    "description": "Create user with incorrect data: all fields are null",
+    "testCaseId": 0,
+    "statusCode": 400,
+    "dto":
+    {
+      "email": null,
+      "password": null,
+      "firstName": null,
+      "lastName": null,
+      "userType": null,
+      "errorCode": 510,
+      "errorMessage": "The request is invalid.",
+      "invalidFields":[ "Email", "Password","FirstName", "LastName", "UserType"]
+    }
+  }
+]

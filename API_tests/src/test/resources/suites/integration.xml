@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Integration suite." parallel="false">
+    <suite-files>
+        <!--API tests.-->
+        <suite-file path="account/account.xml"/>
+        <suite-file path="documentpackage/documentPackage.xml"/>
+        <!--Business logic tests.-->
+    </suite-files>
+</suite>

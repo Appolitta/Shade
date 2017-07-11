@@ -1,0 +1,28 @@
+[
+  {
+    "description": "Create job with correct data",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "userId": 110,
+    "dto":
+    {
+      "name": "string",
+      "categoryId": 1,
+      "location": {
+        "address": "ololo",
+        "latitude": 15,
+        "longitude": 15
+      },
+      "startDate": "2017-07-29T09:06:53.932Z",
+      "endDate": "2017-07-30T09:06:53.932Z",
+      "startTime": "2017-07-29T09:06:53.932Z",
+      "endTime": "2017-07-30T09:06:53.932Z",
+      "salary": 100,
+      "salaryType": 1,
+      "summary": "olololololo",
+      "description": "bububububu"
+    }
+  }
+
+
+]

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<!--Useful suite for testing of your code.-->
+<suite name="Temporary suite." parallel="false">
+    <test name="Temporary test configuration">
+        <parameter name="createDocumentPackagePositiveDdtFile" value="createDocumentPackagePositive.json"/>
+        <classes>
+            <class name="stories.stories.api.documentpackage.DocumentPackageTests">
+                <methods>
+                    <include name="updateDocumentPackageNegative"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
