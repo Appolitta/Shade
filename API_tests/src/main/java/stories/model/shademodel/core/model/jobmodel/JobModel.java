@@ -39,7 +39,7 @@ public class JobModel extends JobBase{
     private List<String> invalidFields;
 
     @JsonProperty("location")
-    private LinkedHashMap<String, String> location;
+    private Location location;
 
     @JsonProperty("summary")
     private String summary;
@@ -105,11 +105,11 @@ public class JobModel extends JobBase{
 
     public void setUserId (Integer PosterId) { this.userId = userId; }
 
-    public LinkedHashMap<String, String> getLocation() {
+    public Location getLocation() {
         return location;
     }
 
-    public void setLocation(LinkedHashMap<String, String> location) {
+    public void setLocation(Location location) {
         this.location = location;
     }
 

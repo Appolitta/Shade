@@ -1,5 +1,4 @@
 [
-
   {
     "description": "Feed job",
     "testCaseId": 0,
@@ -18,7 +17,7 @@
     "userId": 110,
     "dto":
     {
-      "searchingPhrase":"TestFeedJob2"
+      "searchingPhrase":"Feed"
     }
   },
 
@@ -40,11 +39,9 @@
     "userId": 110,
     "dto":
     {
-      "startDate": "07.04.2017"
+      "startDate": "2017-09-25"
     }
   },
-
-
   {
     "description": "Feed job",
     "testCaseId": 0,
@@ -55,7 +52,6 @@
       "salaryMin": "10"
     }
   },
-
   {
     "description": "Feed job ",
     "testCaseId": 0,
@@ -77,7 +73,6 @@
       "maxId": "1000"
     }
   },
-
   {
     "description": "Feed job",
     "testCaseId": 0,
@@ -86,6 +81,32 @@
     "dto":
     {
       "sinceId": "1"
+    }
+  },
+
+  {
+    "description": "Feed job",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "userId": 110,
+    "dto":
+    {
+      "employerRating": "3"
+    }
+
+  },
+
+
+  {
+    "description": "Feed job",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "userId": 110,
+    "dto":
+    {
+      "sinceId": "10",
+      "maxId": "100"
+
     }
   }
 

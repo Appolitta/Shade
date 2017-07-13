@@ -26,9 +26,9 @@ public class JobModelResponse extends JobBase {
     @JsonProperty("name")
     private String name;
 
-    @JsonProperty("salary")
+ /*   @JsonProperty("salary")
     private int salary;
-
+*/
  /*   @JsonProperty("poster")
     private List<String> poster;
 */
@@ -73,14 +73,14 @@ public class JobModelResponse extends JobBase {
         this.salaryNames = salaryNames;
     }
 
-    public int getSalary() {
+ /*   public int getSalary() {
         return salary;
     }
 
     public void setSalary(int salary) {
         this.salary = salary;
     }
-
+*/
  /*   public List<String> getPoster() {
         return poster;
     }

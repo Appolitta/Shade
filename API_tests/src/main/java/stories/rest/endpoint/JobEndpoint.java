@@ -1,5 +1,6 @@
 package stories.rest.endpoint;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.jayway.restassured.response.Response;
 import stories.model.shademodel.core.model.jobmodel.*;
 import stories.rest.Rest;
@@ -69,11 +70,11 @@ public class JobEndpoint extends AbstractEndpoint  {
         }
 
         if (response.getStatusCode() == 200) {
-            List<JobFeedModelResponse> jb = responseMapper.readValue(response.asString(),  List.class);
+            List<JobFeedModelResponse> jb = responseMapper.readValue(response.asString(),  new TypeReference<List<JobFeedModelResponse>>(){});
             return jb;
             //responseMapper.readValue(response.asString(),  List.class);
         } else {
-            List<JobErrorResponse> jb = responseMapper.readValue(response.asString(),  List.class);
+            List<JobErrorResponse> jb = responseMapper.readValue(response.asString(),  new TypeReference<List<JobFeedModelResponse>>(){});
             return jb;
         }
 

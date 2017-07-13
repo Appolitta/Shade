@@ -48,39 +48,34 @@ public class DBFacade extends DBDao {
 
     //Delete user from BD
     public UsersDBModel UserDBDelete(String id){
-        String sql = "DELETE * FROM \"public\".\"User\" WHERE \"Id\" = ?";
+        String sql = "DELETE * FROM \"public\".\"User\" WHERE \"IsDeleted\" = false and \"Id\" = ?";
         return jdbcTemplatePg.queryForObject(sql, new UserMappers.UserRowMapper(), id);
     }
 
     // получить кол-во необходимых запичсей
     //скорее всего проще будет передавать уже готовую строку.
     public Integer JobCount(String sqlRequest){
-
-       // String sql = "SELECT COUNT (*) FROM public.\"Job\" WHERE \"" + field + "\"" + " = '" +  value + "'";
-        String sql = "SELECT COUNT (*) FROM public.\"Job\" WHERE " + sqlRequest;
+        String sql = "SELECT COUNT (*) FROM public.\"Job\" WHERE \"IsDeleted\" = false and " + sqlRequest;
         try {
             int count = 0;
-
-//            return jdbcTemplatePg.queryForObject(sql, new JobMappers.JobRowMapper(), count);
             SqlRowSet set = jdbcTemplatePg.queryForRowSet(sql);
             if (set.next()) {
                 count = set.getInt("count");
             }
             return count;
-
-
         }
         catch (EmptyResultDataAccessException err) {
             return 0;
         }
     }
 
-    public Integer JobCountForRating(String rating){
+    public Integer JobCountForRating(String rating, String sqlRequest){
 
         // String sql = "SELECT COUNT (*) FROM public.\"Job\" WHERE \"" + field + "\"" + " = '" +  value + "'";
         String sql = "select count(1) from\n" +
-                "(select *, \"ReviewsSum\" / \"ReviewsCount\" as \"Rating\" from \"User\") as \"tmp\"\n" +
-                "where \"tmp\".\"Rating\" >  " + rating + " )";
+                "(select *, \"ReviewsSum\" / \"ReviewsCount\" as \"Rating\" from \"User\") as users\n" +
+                "inner join public.\"Job\" jobs on jobs.\"PosterId\" = users.\"Id\"\n"+
+                "where users.\"Rating\" >  " + rating + sqlRequest ;
 
 
         try {
@@ -92,8 +87,6 @@ public class DBFacade extends DBDao {
                 count = set.getInt("count");
             }
             return count;
-
-
         }
         catch (EmptyResultDataAccessException err) {
             return 0;
