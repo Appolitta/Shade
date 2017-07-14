@@ -27,7 +27,7 @@ import java.util.*;
 /**
  * Created by wizard on 04.07.2017.
  */
-public class FeedJobTest extends BaseBackendTest {
+public class JobFeedTest extends BaseBackendTest {
 
     private SettingsManager settingsManager;
     private APIFacade accountAPIFacade;
@@ -240,7 +240,7 @@ public class FeedJobTest extends BaseBackendTest {
                        sa.assertNotNull(response.get(index), "Null count parameters!");
                        JobFeedModelResponse job = response.get(index);
                        response.get(index);
-                       sa.assertTrue(job.getId() <= Integer.valueOf(dto.get("maxId")));
+                       sa.assertTrue(job.getId() < Integer.valueOf(dto.get("maxId")));
                        num--;
                        index++;
                        System.out.println("All good of maxId");
@@ -256,7 +256,7 @@ public class FeedJobTest extends BaseBackendTest {
                        sa.assertNotNull(response.get(index), "Null count parameters!");
                        JobFeedModelResponse job = response.get(index);
                        response.get(index);
-                       sa.assertTrue(job.getId() >= Integer.valueOf(dto.get("sinceId")));
+                       sa.assertTrue(job.getId() > Integer.valueOf(dto.get("sinceId")));
                        num--;
                        index++;
                        System.out.println("All good of sinceId");

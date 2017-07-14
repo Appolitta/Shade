@@ -1,0 +1,77 @@
+[
+
+  {
+    "description": "Update user with correct data",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "dto": {
+      "firstName": "string",
+      "lastName": "string",
+      "email": "string@3bu.ru",
+      "aboutMe": "Ni8.com",
+      "website": "rfwfsdxcgdfdf",
+      "location": {
+        "address": "string",
+        "latitude": 0,
+        "longitude": 0
+      }
+    }
+  },
+
+  {
+    "description": "Update user with correct data",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "dto": {
+      "firstName": "string",
+      "lastName": "string",
+      "email": "string@4bu.ru",
+      "aboutMe": "string",
+      "website": "56yf",
+      "location": {
+        "address": "string",
+        "latitude": 0,
+        "longitude": 0
+      }
+    }
+  },
+  {
+    "description": "Update user with correct data",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "dto": {
+      "firstName": "string",
+      "lastName": "string",
+      "email": "string@5bu.ru",
+      "aboutMe": "string",
+      "website": "string",
+      "location": {
+        "address": "string",
+        "latitude": 0,
+        "longitude": 0
+      }
+    }
+  },
+
+  {
+    "description": "Update user with correct data",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "dto": {
+      "firstName": "string",
+      "lastName": "string",
+      "email": "string@2bu.ru",
+      "aboutMe": "string",
+      "website": "123456789.......nnnnnnnnnnn",
+      "location": {
+        "address": "string",
+        "latitude": 0,
+        "longitude": 0
+      }
+    }
+  }
+
+
+
+
+]
