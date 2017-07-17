@@ -3,9 +3,12 @@
 
 <suite name="Suite for account test." parallel="false">
     <test name="Account tests.">
-        <parameter name="FeedJob" value="feedJob.json"/>
+        <parameter name="About_me_employee" value="userAboutMeEmployee.json"/>
+        <parameter name="About_me_employer" value="userAboutMeEmployer.json"/>
+        <parameter name="About_me_neg" value="userAboutMeNeg.json"/>
+
         <classes>
-            <class name="stories.UserStory.FeedJobTest"/>
+            <class name="stories.UserStory.UpdateUserAboutMe"/>
         </classes>
     </test>
 </suite>

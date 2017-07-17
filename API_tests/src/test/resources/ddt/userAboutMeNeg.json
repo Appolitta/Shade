@@ -1,0 +1,45 @@
+[
+
+  {
+    "description": "Update user with in correct data",
+    "testCaseId": 0,
+    "statusCode": 400,
+    "dto": {
+      "firstName": "",
+      "lastName": "string",
+      "email": "string@2bu.ru",
+      "aboutMe": "string",
+      "website": "123456789.......nnnnnnnnnnn",
+      "location": {
+        "address": "string",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "errorCode": 510,
+      "errorMessage": "The request is invalid.",
+      "invalidFields":["FirstName"]
+    }
+  },
+
+  {
+    "description": "Update user with in correct data",
+    "testCaseId": 0,
+    "statusCode": 400,
+    "dto": {
+      "firstName": "string",
+      "lastName": "string",
+      "email": "string2bu.ru",
+      "aboutMe": "string",
+      "website": "12345  6789...nn",
+      "location": {
+        "address": "string",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "errorCode": 510,
+      "errorMessage": "The request is invalid.",
+      "invalidFields":["Email"]
+    }
+  }
+
+]

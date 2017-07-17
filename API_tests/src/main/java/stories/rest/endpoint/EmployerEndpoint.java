@@ -20,8 +20,8 @@ import java.util.Map;
 /**
  * Created by wizard on 14.07.2017.
  */
-public class EmployeeEndpoint extends AbstractEndpoint{
-    public EmployeeEndpoint(Rest rest) { super(rest, "employee/");}
+public class EmployerEndpoint extends AbstractEndpoint{
+    public EmployerEndpoint(Rest rest) { super(rest, "employer/");}
 
 
     /**
@@ -50,7 +50,6 @@ public class EmployeeEndpoint extends AbstractEndpoint{
             return responseMapper.readValue(response.asString(), UserAboutMeResponse.class);
         }
     }
-
     public Object updateUserNeg(final UserModel request,
                              Integer UserId,
                              final List<ResponseCheck> responseChecks,
@@ -71,7 +70,6 @@ public class EmployeeEndpoint extends AbstractEndpoint{
             return responseMapper.readValue(response.asString(), UserErrorResponse.class);
         }
     }
-
 }
 
 

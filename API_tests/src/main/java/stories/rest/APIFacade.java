@@ -3,6 +3,7 @@ package stories.rest;
 import stories.model.custom.BackendSettings;
 import stories.model.user.authenticator.AuthenticationData;
 import stories.rest.endpoint.EmployeeEndpoint;
+import stories.rest.endpoint.EmployerEndpoint;
 import stories.rest.endpoint.JobEndpoint;
 import stories.rest.endpoint.PackageEndpoint;
 import stories.rest.endpoint.AccountEndpoint;
@@ -22,6 +23,7 @@ public class APIFacade {
     private PackageEndpoint packageEndpoint;
     private JobEndpoint jobEndpoint;
     private EmployeeEndpoint employeeEndpoint;
+    private EmployerEndpoint employerEndpoint;
 
     public APIFacade(AuthenticationData authData, BackendSettings backendSettings)
             throws IOException {
@@ -89,6 +91,20 @@ public class APIFacade {
         return employeeEndpoint;
     }
 
+    /*------------Employer---------*/
+    public EmployerEndpoint getEmployerEndpoint(){
+        if (null == employerEndpoint) {
+            employerEndpoint = new EmployerEndpoint(rest);
+        }
+        return employerEndpoint;
+    }
+
+    public EmployerEndpoint getEmployer(){
+        if (null == accountEndpoint) {
+            employerEndpoint = new EmployerEndpoint(rest);
+        }
+        return employerEndpoint;
+    }
 
 }
 
