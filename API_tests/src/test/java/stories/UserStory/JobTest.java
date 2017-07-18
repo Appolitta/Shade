@@ -67,7 +67,7 @@ public class JobTest extends BaseBackendTest {
         //Sending the API request to the "/account/signup" endpoint and waiting 200 status code
         final JobModel createJobRequest = ddtoSet.getDto();
         JobModelResponse response = null;
-        Integer userId = 110;
+        Integer userId = 169;
         response = (JobModelResponse) accountAPIFacade.getJobEndpoint().createJob(
                 createJobRequest, userId,
                 Collections.singletonList(

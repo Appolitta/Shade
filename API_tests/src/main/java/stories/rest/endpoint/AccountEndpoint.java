@@ -18,7 +18,7 @@ import java.util.Map;
 
 public class AccountEndpoint extends AbstractEndpoint {
     public AccountEndpoint(Rest rest) {
-        super(rest, "/account");
+        super(rest, "account");
     }
 
 

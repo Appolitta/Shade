@@ -75,7 +75,7 @@ public class DBFacade extends DBDao {
         String sql = "select count(1) from\n" +
                 "(select *, \"ReviewsSum\" / \"ReviewsCount\" as \"Rating\" from \"User\") as users\n" +
                 "inner join public.\"Job\" jobs on jobs.\"PosterId\" = users.\"Id\"\n"+
-                "where users.\"Rating\" >  " + rating + sqlRequest ;
+                "where users.\"Rating\" >=  " + rating + sqlRequest ;
 
 
         try {

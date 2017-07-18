@@ -13,13 +13,14 @@ import java.util.Map;
 import java.io.FileWriter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import stories.util.SoftAssert;
 
 /**
  * Created by wizard on 24.06.2017.
  */
 public class JobEndpoint extends AbstractEndpoint  {
     public JobEndpoint(Rest rest) {
-        super(rest, "/job");
+        super(rest, "job");
     }
 
 
@@ -48,36 +49,54 @@ public class JobEndpoint extends AbstractEndpoint  {
 
     public List feedJob (final String request,
                            final List<ResponseCheck> responseChecks,
-                           final String description) throws IOException
-    {
+                           final String description) throws IOException {
 
         Map<String, String> headers = new HashMap<>();
         headers.put("Content-Type", "application/json");
         String req = "/feed?" + request;
-        Response response =  get(req,
+        Response response = get(req,
                 headers,
                 responseChecks,
-                description );
+                description);
         if (response.getStatusCode() == 200) {
-            try{
+            try {
                 FileWriter file = new FileWriter("test.json");
                 file.write(response.asString());
                 file.flush();
                 file.close();
-            } catch (IOException ex){
+            } catch (IOException ex) {
                 ex.printStackTrace();
             }
         }
 
         if (response.getStatusCode() == 200) {
-            List<JobFeedModelResponse> jb = responseMapper.readValue(response.asString(),  new TypeReference<List<JobFeedModelResponse>>(){});
+            List<JobFeedModelResponse> jb = responseMapper.readValue(response.asString(), new TypeReference<List<JobFeedModelResponse>>() {
+            });
             return jb;
             //responseMapper.readValue(response.asString(),  List.class);
         } else {
-            List<JobErrorResponse> jb = responseMapper.readValue(response.asString(),  new TypeReference<List<JobFeedModelResponse>>(){});
+            List<JobErrorResponse> jb = responseMapper.readValue(response.asString(), new TypeReference<List<JobFeedModelResponse>>() {
+            });
             return jb;
         }
-
-
     }
+
+
+        public void checkJobNull(final JobFeedModelResponse job){
+            SoftAssert sa = new SoftAssert();
+            sa.assertNotNull(job.getId());
+            sa.assertNotNull(job.getName());
+            sa.assertNotNull(job.getCategoryId());
+            sa.assertNotNull(job.getLogoUrl().getUrlToFolder());
+            sa.assertNotNull(job.getLogoUrl().getFileName());
+            sa.assertNotNull(job.getLocation().getAddress());
+            sa.assertNotNull(job.getLocation().getId());
+            sa.assertNotNull(job.isSaved());
+            sa.assertNotNull(job.getPoster().getId());
+            sa.assertNotNull(job.getPoster().getFirstName());
+            sa.assertNotNull(job.getPoster().getLastName());
+  //          sa.assertNotNull(job.getPoster().getRaitingInfo().getRating());
+  //          sa.assertNotNull(job.getPoster().getRaitingInfo().getNumberOfReviews());
+//
+        }
 }

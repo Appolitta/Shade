@@ -94,7 +94,7 @@ public class JobFeedTest extends BaseBackendTest {
         if (dto.get("salaryMin") != null) {
             String salaryMin = dto.get("salaryMin");
             feedJobRequest = feedJobRequest + "salaryMin" + "=" + salaryMin + "&";
-            sqlRequest = sqlRequest + "\"Salary\"" + " > " + salaryMin + " and ";
+            sqlRequest = sqlRequest + "\"Salary\"" + " >= " + salaryMin + " and ";
         }
 
         if (dto.get("recordsCount") != null) {
@@ -128,7 +128,10 @@ public class JobFeedTest extends BaseBackendTest {
         String sqlRequest2 = String.join(" ", words);
         if (count == 0) {
             if (dto.get("employerRating") != null) {
-                count = testDBFacade.JobCountForRating(dto.get("employerRating"),sqlRequest2);
+                if(sqlRequest2.length() != 0)
+                    sqlRequest2 = " and " + sqlRequest2;
+                else sqlRequest2 = "    ";
+                count = testDBFacade.JobCountForRating(dto.get("employerRating"), sqlRequest2);
             }
             else
                 count = testDBFacade.JobCount(sqlRequest2);
@@ -179,7 +182,7 @@ public class JobFeedTest extends BaseBackendTest {
 
               //by categoryId
              if (dto.get("categoryId") != null) {
-                 sa.assertTrue(response.size() > 0, "Empty  response after request by name!");
+                 sa.assertTrue(response.size() > 0, "Empty  response after request by categoryId!");
                  num = response.size();
                  index = 0;
                  while (num > 0) {
@@ -194,7 +197,7 @@ public class JobFeedTest extends BaseBackendTest {
                }
                //by startDate
              if (dto.get("startDate") != null) {
-                   sa.assertTrue(response.size() > 0, "Empty  response after request by name!");
+                   sa.assertTrue(response.size() > 0, "Empty  response after request by startDate!");
                    num = response.size();
                    index = 0;
                    while (num > 0) {
@@ -211,14 +214,14 @@ public class JobFeedTest extends BaseBackendTest {
 
                //by salaryMin
              if (dto.get("salaryMin") != null) {
-                   sa.assertTrue(response.size() > 0, "Empty  response after request by name!");
+                   sa.assertTrue(response.size() > 0, "Empty  response after request by salaryMin!");
                    num = response.size();
                    index = 0;
                    while (num > 0) {
                        sa.assertNotNull(response.get(index), "Null count parameters!");
                        JobFeedModelResponse job = response.get(index);
                        response.get(index);
-                       sa.assertTrue(job.getSalary() == Integer.valueOf(dto.get("salaryMin")));
+                       sa.assertTrue(job.getSalary() >= Integer.valueOf(dto.get("salaryMin")));
                        num--;
                        index++;
                        System.out.println("All good of categoryId");
@@ -264,7 +267,7 @@ public class JobFeedTest extends BaseBackendTest {
              }
 
              if (dto.get("employerRating") != null) {
-                 sa.assertTrue(response.size() > 0, "Empty  response after request by sinceId!");
+                 sa.assertTrue(response.size() > 0, "Empty  response after request by employerRating!");
                  num = response.size();
                  index = 0;
                  while (num > 0) {
@@ -280,7 +283,10 @@ public class JobFeedTest extends BaseBackendTest {
 
 
            }
-           else System.out.println("Return invalid count of job");
+           else {
+             sa.assertTrue(count == response.size());
+             System.out.println("!!!!!!!!!!!!!!Return invalid count of job!!!!!!!!!!!!!!");
+         }
         sa.assertAll();
 
 

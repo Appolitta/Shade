@@ -1,16 +1,3 @@
 [
 
-  {
-    "description": "Create user with correct data",
-    "testCaseId": 0,
-    "statusCode": 200,
-    "dto":
-    {
-      "email": "test_user@distillery.com",
-      "password": "qqqaaa77",
-      "firstName": "test",
-      "lastName": "User",
-      "userType": 2
-    }
-  }
  ]

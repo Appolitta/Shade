@@ -17,9 +17,8 @@ public class JobBase {
     @JsonProperty("salary")
     private int salary;
 
-/*    @JsonProperty("salaryType")
+    @JsonProperty("salaryType")
     private Integer salaryType;
-*/
 
     @JsonProperty("categoryId")
     private int categoryId;
@@ -63,14 +62,14 @@ public class JobBase {
     this.salary = Salary;
     }
 
- /*   public Integer getSalaryType() {
+    public Integer getSalaryType() {
         return salaryType;
     }
 
     public void setSalaryType(Integer SalaryType) {
         this.salaryType = SalaryType;
     }
-*/
+
     public Integer getCategory() {
         return categoryId;
     }

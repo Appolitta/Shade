@@ -9,7 +9,7 @@ public class Poster {
     private int id;
     private String firstName;
     private String lastName;
-    private RatingInfo ratingInfo;
+    public RatingInfo ratingInfo;
 
     public RatingInfo getRaitingInfo() {
         return ratingInfo;

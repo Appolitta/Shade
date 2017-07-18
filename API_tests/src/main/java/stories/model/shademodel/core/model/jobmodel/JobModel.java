@@ -44,6 +44,8 @@ public class JobModel extends JobBase{
     @JsonProperty("summary")
     private String summary;
 
+    @JsonProperty("description")
+    private String description;
 
     public int getErrorCode() {
         return errorCode;
@@ -119,5 +121,13 @@ public class JobModel extends JobBase{
 
     public void setSummary(String summary) {
         this.summary = summary;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

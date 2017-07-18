@@ -1,8 +1,6 @@
 package stories.model.shademodel.core.model.jobmodel;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import stories.model.shademodel.core.model.jobmodel.ShadeJobModelResponse;
-import stories.model.shademodel.core.model.jobmodel.JobErrorResponse;
 
 import java.util.List;
 
@@ -18,7 +16,7 @@ public class JobModelResponse extends JobBase {
     private ShadeJobModelResponse shadeJobModelResponse;
 
     @JsonProperty("salaryType")
-    private String  salaryType;
+    private SalaryType salaryType;
 
     @JsonProperty("salaryNames")
     private List<String> salaryNames;
@@ -57,11 +55,11 @@ public class JobModelResponse extends JobBase {
         this.shadeJobModelResponse = shadeJobModelResponse;
     }
 
-    public String getSalaryType() {
+   /* public Integer getSalaryType() {
         return salaryType;
     }
-
-    public void setSalaryType(String salaryType) {
+*/
+    public void setSalaryType(SalaryType salaryType) {
         this.salaryType = salaryType;
     }
 

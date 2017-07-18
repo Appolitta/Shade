@@ -8,11 +8,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public enum SalaryType {
 
 
-    @JsonProperty ("0")
-    SALARY_TYPE_0 (0, "Mix", "Mix"),
+    @JsonProperty ("Fixed")
+    SALARY_TYPE_0 (0, "Fixed", "Fixed"),
 
-    @JsonProperty ("1")
-    SALARY_TYPE_1 (1, "Fixed", "Fixed");
+    @JsonProperty ("Hourly")
+    SALARY_TYPE_1 (1, "Hourly", "Hourly");
 
     private final int salaryType;
     private final String salaryTypeDescription;
