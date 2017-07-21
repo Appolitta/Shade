@@ -1,9 +1,11 @@
 package stories.UserStory;
 
 import com.fasterxml.jackson.core.type.TypeReference;
-import org.testng.annotations.AfterClass;
+import org.testng.annotations.*;
 import stories.managers.SettingsManager;
 import stories.model.shademodel.core.Roles;
+import stories.model.shademodel.core.model.accountmodel.UserModel;
+import stories.model.shademodel.core.model.accountmodel.UserModelResponse;
 import stories.model.shademodel.core.model.jobmodel.JobFeedModelResponse;
 import stories.model.shademodel.core.model.jobmodel.JobModel;
 import stories.model.shademodel.core.model.jobmodel.JobModelResponse;
@@ -18,9 +20,6 @@ import stories.util.TestDataGenerator;
 import stories.util.ddto.DdtDataProvider;
 import stories.util.ddto.DdtoSet;
 import org.testng.ITestContext;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -33,13 +32,13 @@ import java.util.Map;
 public class JobTest extends BaseBackendTest {
 
     private static final String CREATE_JOB = "createJob";
-    private SettingsManager settingsManager;
+    public SettingsManager settingsManager;
 
-    private APIFacade accountAPIFacade;
-
+    public APIFacade accountAPIFacade;
+    public int userId2 = 0;
     private int TEST_NUM = 1;
 
-    @BeforeClass
+
 
     //The DataProvider for the positive test
     @DataProvider(name = "CreateJob")
@@ -53,6 +52,45 @@ public class JobTest extends BaseBackendTest {
                 settingsManager.getDdtDataPath());
     }
 
+    @BeforeClass
+    @AfterClass(dependsOnMethods = "shutdownBaseBackendTest")
+    public void deleteUser()
+            throws IOException, SQLException {
+        if (userId2 != 0) {
+            accountAPIFacade.getAccountEndpoint().deleteUser(
+                    userId2,
+                    Collections.singletonList(ResponseCheckFactory.getStatusCodeCheck(200)),
+                    "Deleting user with id: " + userId2 + ".");
+        }
+    }
+
+    @BeforeTest()
+    public void createEmployee() throws IOException, InterruptedException, SQLException {
+        settingsManager = SettingsManager.getSettingsManager();
+        accountAPIFacade = new APIFacade(null, settingsManager.getDefaultBackendSettings());
+        UserModelResponse response = null;
+
+        String test_data = testDescription + "\n create user \n[ERROR] ";
+        SoftAssert sa = new SoftAssert(test_data);
+        //----Create Employer
+        //Create the test user data without the DataProvider
+        UserModel newUser2 = new UserModel();
+        newUser2.setEmail("test_job_user2@distillery.com");
+        newUser2.setFirstName("Job");
+        newUser2.setLastName("Petriv");
+        newUser2.setPassword("qqqaaa77");
+        newUser2.setUserType(2);
+        //Sending the API request to the "/account/signup" endpoint and waiting 200 status code
+        // UserModelResponse response = null;
+        response = (UserModelResponse) accountAPIFacade.getAccountEndpoint().createUser(
+                newUser2,
+                Collections.singletonList(
+                        ResponseCheckFactory.getStatusCodeCheck(200)),
+                testDescription);
+        System.out.println(" что-нибудь");
+        userId2 = response.getAccess_token() != null ? response.getShadeUserModelResponse().getId() : 0;
+
+    }
 
     @Test(description = "Create the job positive test",
             dataProvider = "CreateJob",
@@ -67,9 +105,10 @@ public class JobTest extends BaseBackendTest {
         //Sending the API request to the "/account/signup" endpoint and waiting 200 status code
         final JobModel createJobRequest = ddtoSet.getDto();
         JobModelResponse response = null;
-        Integer userId = 169;
+
+
         response = (JobModelResponse) accountAPIFacade.getJobEndpoint().createJob(
-                createJobRequest, userId,
+                createJobRequest, userId2,
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(ddtoSet.getStatusCode())),
                 testDescription);

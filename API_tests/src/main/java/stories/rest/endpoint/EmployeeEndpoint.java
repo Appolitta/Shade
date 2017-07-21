@@ -6,6 +6,8 @@ import stories.model.shademodel.core.model.accountmodel.UserModel;
 import stories.model.shademodel.core.model.accountmodel.UserModelResponse;
 import stories.model.shademodel.core.model.jobmodel.JobErrorResponse;
 import stories.model.shademodel.core.model.jobmodel.JobFeedModelResponse;
+import stories.model.shademodel.core.model.jobmodel.JobModel;
+import stories.model.shademodel.core.model.jobmodel.JobModelResponse;
 import stories.model.shademodel.core.model.usermodel.UserAboutMeResponse;
 import stories.model.shademodel.core.model.usermodel.UserErrorResponse;
 import stories.model.shademodel.web.models.LoginBindingModel;
@@ -92,7 +94,7 @@ public class EmployeeEndpoint extends AbstractEndpoint{
         if (response.getStatusCode() == 200) {
             return response;
         } else {
-            return response;
+            return response ;
         }
     }
 
@@ -117,9 +119,75 @@ public class EmployeeEndpoint extends AbstractEndpoint{
             List<JobErrorResponse> jb = responseMapper.readValue(response.asString(),  new TypeReference<List<JobErrorResponse>>(){});
             return jb;
         }
-
-
     }
+
+    public Response saveJob(String request,
+                              Integer UserId,
+                              final List<ResponseCheck> responseChecks,
+                              final String description)
+            throws  IOException{
+        Map<String, String> headers = new HashMap<>();
+        headers.put("Content-Type", "application/json");
+        Response response =  post(
+                Integer.toString(UserId) + "/savedjob",
+                headers,
+                request,
+                false,
+                responseChecks,
+                description);
+        if (response.getStatusCode() == 200) {
+            return response;
+        } else {
+            return response ;
+        }
+    }
+
+
+    public List savedJob(String request,
+                           Integer UserId,
+                           final List<ResponseCheck> responseChecks,
+                           final String description)
+            throws  IOException{
+        Map<String, String> headers = new HashMap<>();
+        headers.put("Content-Type", "application/json");
+        Response response =  get(
+                Integer.toString(UserId) + "/savedjobs" + request,
+                headers,
+                responseChecks,
+                description);
+
+        if (response.getStatusCode() == 200) {
+            List<JobFeedModelResponse> jb = responseMapper.readValue(response.asString(),  new TypeReference<List<JobFeedModelResponse>>(){});
+            return jb;
+            //responseMapper.readValue(response.asString(),  List.class);
+        } else {
+            List<JobErrorResponse> jb = responseMapper.readValue(response.asString(),  new TypeReference<List<JobErrorResponse>>(){});
+            return jb;
+        }
+    }
+
+
+    public Response deleteSave(String request,
+                                       Integer UserId,
+                                       final List<ResponseCheck> responseChecks,
+                                       final String description)
+            throws  IOException{
+        Map<String, String> headers = new HashMap<>();
+        headers.put("Content-Type", "application/json");
+        Response response =  delete(
+                Integer.toString(UserId) + "/savedjob",
+                request,
+                false,
+                responseChecks,
+                description);
+
+        if (response.getStatusCode() == 200) {
+            return response;
+        } else {
+            return response;
+        }
+    }
+
 }
 
 

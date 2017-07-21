@@ -36,9 +36,10 @@ public class UpdateUserAboutMe extends BaseBackendTest {
     private static final String ABOUT_ME_NEG = "About_me_neg";
 
 
-    private SettingsManager settingsManager;
+    private  SettingsManager settingsManager;
     private int TEST_NUM = 1;
-    public Integer userId = 0;
+    public int userId2 = 0;
+    public int userId3 = 0;
 
 
     //The DataProvider for the positive test
@@ -77,68 +78,86 @@ public class UpdateUserAboutMe extends BaseBackendTest {
                 context, ABOUT_ME_NEG,
                 settingsManager.getDdtDataPath());
     }
-/*   @BeforeClass
-    public void createUser(/*final Map ddtSetMap)
- /*           throws IOException, SQLException {
-        testCaseId = TEST_NUM + 1;
-    //create user for change
-        UserModel newUser = new UserModel();
-        newUser.setEmail("test_udate_user2@distillery.com");
-        newUser.setFirstName("First");
-        newUser.setLastName("Petriv");
-        newUser.setPassword("qqqaaa77");
+    @BeforeClass ()
+    public void createUser() throws IOException, InterruptedException, SQLException {
+        settingsManager = SettingsManager.getSettingsManager();
+        accountAPIFacade = new APIFacade(null, settingsManager.getDefaultBackendSettings());
+        UserModelResponse response = null;
 
-    int role_id = 2;
-        newUser.setUserType(role_id);
-    //Sending the API request to the "/account/signup" endpoint and waiting 200 status code
-    UserModelResponse response = null;
-    response = (UserModelResponse) accountAPIFacade.getAccountEndpoint().createUser(
-            newUser,
-            Collections.singletonList(
-                    ResponseCheckFactory.getStatusCodeCheck(200)),
-    testDescription);
-    userId  = response.getAccess_token() != null ? response.getShadeUserModelResponse().getId() : 0;
+        String test_data = testDescription + "\n create user \n[ERROR] ";
+        SoftAssert sa = new SoftAssert(test_data);
+        //----Create Employer
+        //Create the test user data without the DataProvider
+        UserModel newUser2 = new UserModel();
+        newUser2.setEmail("test_about_me_user2@distillery.com");
+        newUser2.setFirstName("First");
+        newUser2.setLastName("Petriv");
+        newUser2.setPassword("qqqaaa77");
+        newUser2.setUserType(2);
+        //Sending the API request to the "/account/signup" endpoint and waiting 200 status code
+        // UserModelResponse response = null;
+        response = (UserModelResponse) accountAPIFacade.getAccountEndpoint().createUser(
+                newUser2,
+                Collections.singletonList(
+                        ResponseCheckFactory.getStatusCodeCheck(200)),
+                testDescription);
+        System.out.println(" что-нибудь");
+        userId2 = response.getAccess_token() != null ? response.getShadeUserModelResponse().getId() : 0;
+
+
+        UserModel newUser3 = new UserModel();
+        newUser3.setEmail("test_about_me_user3_1@distillery.com");
+        newUser3.setFirstName("First");
+        newUser3.setLastName("Petriv");
+        newUser3.setPassword("qqqaaa77");
+        newUser3.setUserType(3);
+        //Sending the API request to the "/account/signup" endpoint and waiting 200 status code
+
+        response = (UserModelResponse) accountAPIFacade.getAccountEndpoint().createUser(
+                newUser3,
+                Collections.singletonList(
+                        ResponseCheckFactory.getStatusCodeCheck(200)),
+                testDescription);
+        userId3 = response.getAccess_token() != null ? response.getShadeUserModelResponse().getId() : 0;
+
+
     }
 
-*/
-  //  @BeforeTest
-  /*  @AfterTest(dependsOnMethods = "shutdownBaseBackendTest")
-     public void deleteUser2()
-             throws IOException, SQLException {
-         if (userId != 0) {
-             accountAPIFacade.getAccountEndpoint().deleteUser(
-                     userId,
-                     Collections.singletonList(ResponseCheckFactory.getStatusCodeCheck(200)),
-                     "Deleting user with id: " + userId + ".");
-         }
-     }
+
+
+
     @AfterClass(dependsOnMethods = "shutdownBaseBackendTest")
-/*    public void deleteUser()
+    public void deleteUser()
             throws IOException, SQLException {
-        if (userId != 0) {
+        if (userId2 != 0) {
             accountAPIFacade.getAccountEndpoint().deleteUser(
-                    userId,
+                    userId2,
                     Collections.singletonList(ResponseCheckFactory.getStatusCodeCheck(200)),
-                    "Deleting user with id: " + userId + ".");
+                    "Deleting user with id: " + userId2 + ".");
+        }
+
+        if (userId3 != 0) {
+            accountAPIFacade.getAccountEndpoint().deleteUser(
+                    userId3,
+                    Collections.singletonList(ResponseCheckFactory.getStatusCodeCheck(200)),
+                    "Deleting user with id: " + userId3 + ".");
         }
     }
- */
+
     @Test(description = "About me positive test",
             dataProvider = "About_me_employee",
             groups = {"accountAPIFacade, test-duration.short", "test-state.working"}, priority = 1)
     public void setAboutMeEmployeePositive(final Map ddtSetMap)
             throws IOException, SQLException {
 
-             userId = 165;
-
-            DdtoSet<UserAboutMeResponse> ddtoSet =
+           DdtoSet<UserAboutMeResponse> ddtoSet =
                     mapper.convertValue(ddtSetMap, new TypeReference<DdtoSet<UserAboutMeResponse>>() {
                     });
             //Sending the API request to the "/account/signup" endpoint and waiting 200 status code
             final UserAboutMeResponse updateUserRequest = ddtoSet.getDto();
-            UserAboutMeResponse response2 = null;
-            response2 = (UserAboutMeResponse) accountAPIFacade.getEmployeeEndpoint().updateUser(
-                    updateUserRequest, userId,
+            UserAboutMeResponse response3 = null;
+            response3 = (UserAboutMeResponse) accountAPIFacade.getEmployeeEndpoint().updateUser(
+                    updateUserRequest, userId3,
                     Collections.singletonList(
                             ResponseCheckFactory.getStatusCodeCheck(ddtoSet.getStatusCode())),
                     testDescription);
@@ -160,13 +179,13 @@ public class UpdateUserAboutMe extends BaseBackendTest {
             //           sa.assertTrue(Roles.getById(user_id).getRoleDescription().equals(type));
             //    }
             //     sa.assertTrue(response.getAccess_token() != null, test_data);
-            sa.assertTrue(first_name.equals(response2.getFirstName()));
-            sa.assertTrue(last_name.equals(response2.getLastName()));
-            sa.assertTrue(email.equals(response2.getEmail()));
-            sa.assertTrue(me.equals(response2.getAboutMe()));
-            sa.assertTrue(website.equals(response2.getWebsite()));
+            sa.assertTrue(first_name.equals(response3.getFirstName()));
+            sa.assertTrue(last_name.equals(response3.getLastName()));
+            sa.assertTrue(email.equals(response3.getEmail()));
+            sa.assertTrue(me.equals(response3.getAboutMe()));
+            sa.assertTrue(website.equals(response3.getWebsite()));
             sa.assertNotNull(location);
-            userId = response2.getAccess_token() != null ? response2.getId() : 0;
+            userId2 = response3.getAccess_token() != null ? response3.getId() : 0;
             sa.assertAll();
         }
 
@@ -176,7 +195,6 @@ public class UpdateUserAboutMe extends BaseBackendTest {
     public void setAboutMeEmployerPositive(final Map ddtSetMap)
             throws IOException, SQLException {
 
-        userId = 167;
 
         DdtoSet<UserAboutMeResponse> ddtoSet =
                 mapper.convertValue(ddtSetMap, new TypeReference<DdtoSet<UserAboutMeResponse>>() {
@@ -185,7 +203,7 @@ public class UpdateUserAboutMe extends BaseBackendTest {
         final UserAboutMeResponse updateUserRequest = ddtoSet.getDto();
         UserAboutMeResponse response2 = null;
         response2 = (UserAboutMeResponse) accountAPIFacade.getEmployerEndpoint().updateUser(
-                updateUserRequest, userId,
+                updateUserRequest, userId2,
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(ddtoSet.getStatusCode())),
                 testDescription);
@@ -213,7 +231,7 @@ public class UpdateUserAboutMe extends BaseBackendTest {
         sa.assertTrue(me.equals(response2.getAboutMe()));
         sa.assertTrue(website.equals(response2.getWebsite()));
         sa.assertNotNull(location);
-        userId = response2.getAccess_token() != null ? response2.getId() : 0;
+        userId2 = response2.getAccess_token() != null ? response2.getId() : 0;
         sa.assertAll();
     }
 
@@ -223,8 +241,6 @@ public class UpdateUserAboutMe extends BaseBackendTest {
     public void setAboutMeEmployeeNegative(final Map ddtSetMap)
             throws IOException, SQLException {
 
-        userId = 165;
-
         DdtoSet<UserModel> ddtoSet =
                 mapper.convertValue(ddtSetMap, new TypeReference<DdtoSet<UserModel>>() {
                 });
@@ -232,7 +248,7 @@ public class UpdateUserAboutMe extends BaseBackendTest {
         final UserModel updateUserRequest = ddtoSet.getDto();
         UserErrorResponse error_response_data = null;
         error_response_data = (UserErrorResponse) accountAPIFacade.getEmployeeEndpoint().updateUserNeg(
-                updateUserRequest, userId,
+                updateUserRequest, userId3,
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(ddtoSet.getStatusCode())),
                 testDescription);
@@ -259,7 +275,7 @@ public class UpdateUserAboutMe extends BaseBackendTest {
     public void setAboutMeEmployerNegative(final Map ddtSetMap)
             throws IOException, SQLException {
 
-        userId = 167;
+
 
         DdtoSet<UserModel> ddtoSet =
                 mapper.convertValue(ddtSetMap, new TypeReference<DdtoSet<UserModel>>() {
@@ -268,7 +284,7 @@ public class UpdateUserAboutMe extends BaseBackendTest {
         final UserModel updateUserRequest = ddtoSet.getDto();
         UserErrorResponse error_response_data = null;
         error_response_data = (UserErrorResponse) accountAPIFacade.getEmployerEndpoint().updateUserNeg(
-                updateUserRequest, userId,
+                updateUserRequest, userId2,
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(ddtoSet.getStatusCode())),
                 testDescription);

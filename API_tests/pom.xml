@@ -23,18 +23,19 @@
         <targetServerBaseAPIPath></targetServerBaseAPIPath>
 
         <!-- Test server. -->
-        <targetServer>api.shade.distillery.com</targetServer>
+        <targetServer>autotest-api.shade.distillery.com</targetServer>
         <targetPort>80</targetPort>
 
         <superUserLogin>superUserLogin</superUserLogin>
         <superUserPassword>d2323h48SVd</superUserPassword>
 
-        <targetDbServer>shadedevdb.cmhgpuhmr3yu.us-west-1.rds.amazonaws.com</targetDbServer>
+        <targetDbServer>shadedb-autotests.cmhgpuhmr3yu.us-west-1.rds.amazonaws.com</targetDbServer>
         <targetDbPort>5432</targetDbPort>
-        <targetDbName>ShadeDevDB</targetDbName>
-        <targetDbUsername>ShadeDevDBUser</targetDbUsername>
-        <targetDbPassword>T1iau07$d6!</targetDbPassword>
+        <targetDbName>ShadeAutotestDB</targetDbName>
+        <targetDbUsername>ShadeDBUser</targetDbUsername>
+        <targetDbPassword>z0F2iv45q!Ka</targetDbPassword>
     </properties>
+
 
     <dependencies>
         <dependency>
@@ -102,6 +103,11 @@
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.1.7</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>RELEASE</version>
         </dependency>
     </dependencies>
 

@@ -1,18 +1,14 @@
 package stories.rest.endpoint;
 
 import com.jayway.restassured.response.Response;
+import stories.model.custom.ErrorResponse;
 import stories.model.shademodel.core.model.accountmodel.UserModel;
-import stories.model.shademodel.core.model.accountmodel.UserModelResponse;
 import stories.model.shademodel.core.model.usermodel.UserAboutMeResponse;
 import stories.model.shademodel.core.model.usermodel.UserErrorResponse;
-import stories.model.shademodel.web.models.LoginBindingModel;
-import stories.model.shademodel.web.models.UserBindingModel;
 import stories.rest.Rest;
 import stories.rest.responsecheck.ResponseCheck;
-import stories.rest.responsecheck.ResponseCheckFactory;
 
 import java.io.IOException;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -68,6 +64,27 @@ public class EmployerEndpoint extends AbstractEndpoint{
             return responseMapper.readValue(response.asString(), UserErrorResponse.class);
         } else {
             return responseMapper.readValue(response.asString(), UserErrorResponse.class);
+        }
+    }
+
+    public Response acceptEmployee(String request,
+
+                            final List<ResponseCheck> responseChecks,
+                            final String description)
+            throws  IOException{
+        Map<String, String> headers = new HashMap<>();
+        headers.put("Content-Type", "application/json");
+        Response response =  post(
+                "acceptemployee",
+                headers,
+                request,
+                false,
+                responseChecks,
+                description);
+        if (response.getStatusCode() == 200) {
+            return response;
+        } else {
+            return response;
         }
     }
 }
