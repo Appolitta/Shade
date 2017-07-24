@@ -4,6 +4,7 @@ import com.jayway.restassured.response.Response;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import org.testng.reporters.jq.INavigatorPanel;
 import stories.managers.SettingsManager;
 import stories.model.shademodel.core.model.accountmodel.UserModelResponse;
 import stories.model.shademodel.core.model.chatmodel.ChatErrorResponse;
@@ -36,6 +37,10 @@ public class HiredJobs extends BaseBackendTest {
     public Integer userId2 = 0;
     public Integer userId3_1 = 0;
     public String request = "";
+    public int jobId = 0;
+
+    public HiredJobs() throws IOException {
+    }
 
 
     /*@DataProvider(name = "applayJob")
@@ -180,7 +185,7 @@ public class HiredJobs extends BaseBackendTest {
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(200)),
                 testDescription);
-        Integer jobId = responseJob.getId();
+        jobId = responseJob.getId();
 
         request = "{\"jobId\":" + responseJob.getId() + "}";
         //----Applay The Job
@@ -224,8 +229,8 @@ public class HiredJobs extends BaseBackendTest {
 
         request = "{\"selfId\":" + userId3_1 + "\"jobId\":" + jobId + "}";
 }
-        Rrsponse response_acceptjob  = (ChatResponse)accountAPIFacade.getEmployeeEndpoint().acceptjob(
-                request,
+        Response response_acceptjob  = (Response) accountAPIFacade.getEmployeeEndpoint().acceptjob(
+                request, userId3_1,
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(200)),
                 testDescription);
@@ -233,12 +238,14 @@ public class HiredJobs extends BaseBackendTest {
 
 
         //hiredJob
-        String feedJobRequest = "";
+        String feedJobRequest = "?maxId=" + Integer.toString(jobId + 1) + "&sinceId=" + Integer.toString(jobId - 1);
         List<JobFeedModelResponse> response = accountAPIFacade.getEmployeeEndpoint().hiredjobs(
                 feedJobRequest, userId3_1,
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(200)),
                 testDescription);
+
+
     }
 
 
