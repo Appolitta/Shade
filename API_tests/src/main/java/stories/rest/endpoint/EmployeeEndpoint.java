@@ -188,6 +188,79 @@ public class EmployeeEndpoint extends AbstractEndpoint{
         }
     }
 
+    //POST /employee/acceptjoboffer
+    public Response acceptjob(String request,
+                              Integer UserId,
+                              final List<ResponseCheck> responseChecks,
+                              final String description)
+            throws  IOException{
+        Map<String, String> headers = new HashMap<>();
+        headers.put("Content-Type", "application/json");
+        Response response =  post(
+                "/acceptjoboffer",
+                headers,
+                request,
+                false,
+                responseChecks,
+                description);
+        if (response.getStatusCode() == 200) {
+            return response;
+        } else {
+            return response ;
+        }
+    }
+    //POST /employee/declinejoboffer
+
+   public Response declinejob(String request,
+                              Integer UserId,
+                              final List<ResponseCheck> responseChecks,
+                              final String description)
+            throws  IOException{
+        Map<String, String> headers = new HashMap<>();
+        headers.put("Content-Type", "application/json");
+        Response response =  post(
+                "/declinejoboffer",
+                headers,
+                request,
+                false,
+                responseChecks,
+                description);
+        if (response.getStatusCode() == 200) {
+            return response;
+        } else {
+            return response ;
+        }
+    }
+
+    //GET /employee/{userId}/hiredjobs
+    public List hiredjobs (final String request,
+                         Integer UserId,
+                         final List<ResponseCheck> responseChecks,
+                         final String description) throws IOException {
+
+        Map<String, String> headers = new HashMap<>();
+        headers.put("Content-Type", "application/json");
+        String req = Integer.toString(UserId) + "/hiredjobs" +request;
+        Response response =  get(req,
+                headers,
+                responseChecks,
+                description);
+
+
+        if (response.getStatusCode() == 200) {
+            List<JobFeedModelResponse> jb = responseMapper.readValue(response.asString(), new TypeReference<List<JobFeedModelResponse>>() {
+            });
+            return jb;
+            //responseMapper.readValue(response.asString(),  List.class);
+        } else {
+            List<JobErrorResponse> jb = responseMapper.readValue(response.asString(), new TypeReference<List<JobFeedModelResponse>>() {
+            });
+            return jb;
+        }
+    }
+
+
+
 }
 
 

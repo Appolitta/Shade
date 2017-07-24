@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite for account test." parallel="false">
+    <test name="About Me tests.">
+        <parameter name="About_me_employee" value="userAboutMeEmployee.json"/>
+        <parameter name="About_me_employer" value="userAboutMeEmployer.json"/>
+        <parameter name="About_me_neg" value="userAboutMeNeg.json"/>
+
+        <classes>
+            <class name="stories.UserStory.UpdateUserAboutMe"/>
+        </classes>
+    </test>
+</suite>

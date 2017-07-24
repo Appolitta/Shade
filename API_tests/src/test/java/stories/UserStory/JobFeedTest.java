@@ -148,10 +148,10 @@ public class JobFeedTest extends BaseBackendTest {
          List<JobFeedModelResponse> response =  new ArrayList<>();
 
          response = accountAPIFacade.getJobEndpoint().feedJob(
-                   feedJobRequest,
-                    Collections.singletonList(
-                            ResponseCheckFactory.getStatusCodeCheck(ddtoSet.getStatusCode())),
-                    testDescription);
+                feedJobRequest,
+                Collections.singletonList(
+                        ResponseCheckFactory.getStatusCodeCheck(ddtoSet.getStatusCode())),
+                testDescription);
 
          String test_data = ddtoSet.getDescription() + "\ncreate job test\nsetId:"
                     + testCaseId + "\n" + ddtoSet.getDescription() + "\n(caseId:" + testCaseId + ")\n[ERROR] ";

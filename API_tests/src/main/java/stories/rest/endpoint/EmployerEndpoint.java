@@ -3,6 +3,8 @@ package stories.rest.endpoint;
 import com.jayway.restassured.response.Response;
 import stories.model.custom.ErrorResponse;
 import stories.model.shademodel.core.model.accountmodel.UserModel;
+import stories.model.shademodel.core.model.chatmodel.ChatErrorResponse;
+import stories.model.shademodel.core.model.chatmodel.ChatResponse;
 import stories.model.shademodel.core.model.usermodel.UserAboutMeResponse;
 import stories.model.shademodel.core.model.usermodel.UserErrorResponse;
 import stories.rest.Rest;
@@ -16,24 +18,23 @@ import java.util.Map;
 /**
  * Created by wizard on 14.07.2017.
  */
-public class EmployerEndpoint extends AbstractEndpoint{
-    public EmployerEndpoint(Rest rest) { super(rest, "employer/");}
+public class EmployerEndpoint extends AbstractEndpoint {
+    public EmployerEndpoint(Rest rest) {
+        super(rest, "employer/");
+    }
 
 
     /**
      * Update user info
-     *
-     *
-     *
      */
     public Object updateUser(final UserModel request,
                              Integer UserId,
                              final List<ResponseCheck> responseChecks,
                              final String description)
-            throws  IOException{
+            throws IOException {
         Map<String, String> headers = new HashMap<>();
         headers.put("Content-Type", "application/json");
-        Response response =  put(
+        Response response = put(
                 Integer.toString(UserId) + "/aboutme",
                 headers,
                 request,
@@ -46,14 +47,15 @@ public class EmployerEndpoint extends AbstractEndpoint{
             return responseMapper.readValue(response.asString(), UserAboutMeResponse.class);
         }
     }
+
     public Object updateUserNeg(final UserModel request,
-                             Integer UserId,
-                             final List<ResponseCheck> responseChecks,
-                             final String description)
-            throws  IOException{
+                                Integer UserId,
+                                final List<ResponseCheck> responseChecks,
+                                final String description)
+            throws IOException {
         Map<String, String> headers = new HashMap<>();
         headers.put("Content-Type", "application/json");
-        Response response =  put(
+        Response response = put(
                 Integer.toString(UserId) + "/aboutme",
                 headers,
                 request,
@@ -67,14 +69,14 @@ public class EmployerEndpoint extends AbstractEndpoint{
         }
     }
 
-    public Response acceptEmployee(String request,
+    public Object acceptEmployee(String request,
 
-                            final List<ResponseCheck> responseChecks,
-                            final String description)
-            throws  IOException{
+                                 final List<ResponseCheck> responseChecks,
+                                 final String description)
+            throws IOException {
         Map<String, String> headers = new HashMap<>();
         headers.put("Content-Type", "application/json");
-        Response response =  post(
+        Response response = post(
                 "acceptemployee",
                 headers,
                 request,
@@ -82,13 +84,12 @@ public class EmployerEndpoint extends AbstractEndpoint{
                 responseChecks,
                 description);
         if (response.getStatusCode() == 200) {
-            return response;
+            return responseMapper.readValue(response.asString(), ChatResponse.class);
         } else {
-            return response;
+            return responseMapper.readValue(response.asString(), ChatErrorResponse.class);
         }
     }
+
 }
-
-
 
 
