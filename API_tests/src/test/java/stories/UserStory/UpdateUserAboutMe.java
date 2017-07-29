@@ -106,7 +106,7 @@ public class UpdateUserAboutMe extends BaseBackendTest {
 
 
         UserModel newUser3 = new UserModel();
-        newUser3.setEmail("test_about_me_user3_1@distillery.com");
+        newUser3.setEmail("test_about_me_user3@distillery.com");
         newUser3.setFirstName("First");
         newUser3.setLastName("Petriv");
         newUser3.setPassword("qqqaaa77");
@@ -185,9 +185,9 @@ public class UpdateUserAboutMe extends BaseBackendTest {
             sa.assertTrue(me.equals(response3.getAboutMe()));
             sa.assertTrue(website.equals(response3.getWebsite()));
             sa.assertNotNull(location);
-            userId2 = response3.getAccess_token() != null ? response3.getId() : 0;
+         //   userId3 = response3.getAccess_token() != null ? response3.getId() : 0;
             sa.assertAll();
-        }
+       }
 
     @Test(description = "About me positive test",
             dataProvider = "About_me_employer",
@@ -199,7 +199,7 @@ public class UpdateUserAboutMe extends BaseBackendTest {
         DdtoSet<UserAboutMeResponse> ddtoSet =
                 mapper.convertValue(ddtSetMap, new TypeReference<DdtoSet<UserAboutMeResponse>>() {
                 });
-        //Sending the API request to the "/account/signup" endpoint and waiting 200 status code
+
         final UserAboutMeResponse updateUserRequest = ddtoSet.getDto();
         UserAboutMeResponse response2 = null;
         response2 = (UserAboutMeResponse) accountAPIFacade.getEmployerEndpoint().updateUser(
@@ -231,7 +231,7 @@ public class UpdateUserAboutMe extends BaseBackendTest {
         sa.assertTrue(me.equals(response2.getAboutMe()));
         sa.assertTrue(website.equals(response2.getWebsite()));
         sa.assertNotNull(location);
-        userId2 = response2.getAccess_token() != null ? response2.getId() : 0;
+    //    userId2 = response2.getAccess_token() != null ? response2.getId() : 0;
         sa.assertAll();
     }
 

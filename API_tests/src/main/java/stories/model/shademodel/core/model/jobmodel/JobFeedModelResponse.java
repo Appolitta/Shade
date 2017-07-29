@@ -33,6 +33,9 @@ public class JobFeedModelResponse extends JobModel  {
         @JsonProperty("poster")
         private Poster poster;
 
+        @JsonProperty("isReported")
+        private Boolean isReported;
+
 
         public void setLogoUrl(LogoUrl logoUrl) {
             this.logoUrl = logoUrl;
@@ -88,6 +91,14 @@ public class JobFeedModelResponse extends JobModel  {
 
         public  void setName(String name) {
             this.name = name;
+        }
+
+        public Boolean getReported() {
+            return isReported;
+        }
+
+        public void setReported(Boolean reported) {
+            isReported = reported;
         }
 
 }

@@ -7,6 +7,8 @@ import org.testng.annotations.*;
 import stories.managers.SettingsManager;
 import stories.model.shademodel.core.model.accountmodel.UserModel;
 import stories.model.shademodel.core.model.accountmodel.UserModelResponse;
+import stories.model.shademodel.core.model.chatmodel.ChatErrorResponse;
+import stories.model.shademodel.core.model.chatmodel.ChatResponse;
 import stories.model.shademodel.core.model.jobmodel.*;
 import stories.rest.APIFacade;
 import stories.rest.responsecheck.ResponseCheckFactory;
@@ -32,6 +34,7 @@ public class ApplayJob  extends BaseBackendTest{
     public Integer userId2 = 0;
     public Integer userId3_1 = 0;
     public Integer userId3_2 = 0;
+    public Integer jobId = 0;
 
 
 
@@ -69,7 +72,7 @@ public class ApplayJob  extends BaseBackendTest{
         }
     }
 
-    @BeforeTest ()
+    @BeforeClass ()
     public void createUser() throws IOException, InterruptedException, SQLException {
         settingsManager = SettingsManager.getSettingsManager();
         accountAPIFacade = new APIFacade(null, settingsManager.getDefaultBackendSettings());
@@ -127,10 +130,10 @@ public class ApplayJob  extends BaseBackendTest{
 
 
     //    userId3_2 = 871;
-    @Test /*(description = "Applay Job",
-            dataProvider = "applayJob",
-             priority = 1))*/
-    public void applayJob() throws IOException, InterruptedException, SQLException {
+    @Test (/*description = "Applay Job",
+            dataProvider = "applayJob",*/
+             priority = 1)
+        public void applayJob() throws IOException, InterruptedException, SQLException {
         accountAPIFacade = new APIFacade(null, settingsManager.getDefaultBackendSettings());
         settingsManager = SettingsManager.getSettingsManager();
 
@@ -151,7 +154,7 @@ public class ApplayJob  extends BaseBackendTest{
         createJob.setEndDate("2017-07-30T09:06:53.932Z");
         createJob.setEndTime("2017-07-30T09:06:53.932Z");
         createJob.setSalary(100);
-        createJob.setSalaryType(1);
+        createJob.setSalaryType("1");
         createJob.setSummary("olololololo");
         createJob.setDescription("bububububu");
         createJob.setUserId(userId2);
@@ -162,7 +165,7 @@ public class ApplayJob  extends BaseBackendTest{
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(200)),
                 testDescription);
-        Integer JobId = responseJob.getId();
+        jobId = responseJob.getId();
 
         String request = "{\"jobId\":" + responseJob.getId() + "}";
         //----Applay The Job
@@ -210,12 +213,39 @@ public class ApplayJob  extends BaseBackendTest{
         sa.assertNotNull(response_appled.get(0).getId());
         System.out.print(response_appled2.get(0).getId());
         sa.assertNotNull(response_appled2.get(0).getId());
-
-
     }
 
+    @Test (/*description = "Applay Job",
+            dataProvider = "applayJob",*/
+            priority = 2)
+    public void declinedJob() throws IOException, InterruptedException, SQLException {
+        accountAPIFacade = new APIFacade(null, settingsManager.getDefaultBackendSettings());
+        settingsManager = SettingsManager.getSettingsManager();
+
+        String request = "{\n" +
+                "  \"selfId\":" + userId3_1 +
+                ",  \"jobId\":" + jobId +
+                "}";
+        ChatResponse  response_decline = (ChatResponse) accountAPIFacade.getEmployeeEndpoint().declinejob(
+                request,
+                Collections.singletonList(
+                        ResponseCheckFactory.getStatusCodeCheck(200)),
+                testDescription);
 
 
+        ChatErrorResponse response_decline2 = (ChatErrorResponse) accountAPIFacade.getEmployeeEndpoint().declinejob(
+                request,
+                Collections.singletonList(
+                        ResponseCheckFactory.getStatusCodeCheck(400)),
+                testDescription);
+
+        SoftAssert sa = new SoftAssert();
+        response_decline2.getErrorCode();
+        sa.assertTrue(response_decline2.getErrorCode() == 307);
+        sa.assertTrue(response_decline2.getErrorMessage().equals("The user has not been accepted to this job by the employer."));
+        sa.assertAll();
+
+    }
 
 
 

@@ -2,10 +2,7 @@ package stories.UserStory;
 
 import com.jayway.restassured.response.Response;
 import org.testng.ITestContext;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import stories.managers.SettingsManager;
 import stories.model.shademodel.core.model.accountmodel.UserModel;
 import stories.model.shademodel.core.model.accountmodel.UserModelResponse;
@@ -69,7 +66,7 @@ public class SaveJob extends BaseBackendTest {
         }
     }
 
-    @BeforeTest()
+    @BeforeClass()
     public void createEmployee() throws IOException, InterruptedException, SQLException {
         settingsManager = SettingsManager.getSettingsManager();
         accountAPIFacade = new APIFacade(null, settingsManager.getDefaultBackendSettings());
@@ -120,9 +117,9 @@ public class SaveJob extends BaseBackendTest {
         userId3_2 = response.getAccess_token() != null ? response.getShadeUserModelResponse().getId() : 0;
 
     }
-    @Test /*(description = "save Job",
-            dataProvider = "saveJob",
-            priority = 1)*/
+    @Test (/*description = "save Job",
+            dataProvider = "saveJob",*/
+            priority = 1)
     public void saveJob() throws IOException, InterruptedException, SQLException {
         accountAPIFacade = new APIFacade(null, settingsManager.getDefaultBackendSettings());
         settingsManager = SettingsManager.getSettingsManager();
@@ -143,11 +140,10 @@ public class SaveJob extends BaseBackendTest {
         createJob.setEndDate("2017-07-30T09:06:53.932Z");
         createJob.setEndTime("2017-07-30T09:06:53.932Z");
         createJob.setSalary(100);
-        createJob.setSalaryType(1);
+        createJob.setSalaryType("1");
         createJob.setSummary("olololololo");
         createJob.setDescription("bububububu");
         createJob.setLocation(location);
-
 
 
         JobModelResponse responseJob = null;
@@ -159,7 +155,7 @@ public class SaveJob extends BaseBackendTest {
         jobId = responseJob.getId();
         String request = "{\"jobId\":" + responseJob.getId() + "}";
         //----save The Job
-        Response response_save  = accountAPIFacade.getEmployeeEndpoint().saveJob(
+        Response response_save = accountAPIFacade.getEmployeeEndpoint().saveJob(
                 request, userId3_1,
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(200)),
@@ -174,8 +170,8 @@ public class SaveJob extends BaseBackendTest {
                 testDescription);
 */
         //----Get Applaed Job
-        String request_saved = "?maxId=" + Integer.toString(jobId + 1) + "&sinceId=" + Integer.toString(jobId  - 1);
-        List<JobFeedModelResponse> response_appled  = accountAPIFacade.getEmployeeEndpoint().savedJob(
+        String request_saved = "?maxId=" + Integer.toString(jobId + 1) + "&sinceId=" + Integer.toString(jobId - 1);
+        List<JobFeedModelResponse> response_appled = accountAPIFacade.getEmployeeEndpoint().savedJob(
                 request_saved, userId3_1,
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(200)),
@@ -184,7 +180,7 @@ public class SaveJob extends BaseBackendTest {
         sa.assertTrue(response_appled.get(0).isSaved() == true);
         sa.assertAll();
 
-        List<JobFeedModelResponse> response_appled2  = accountAPIFacade.getEmployeeEndpoint().savedJob(
+        List<JobFeedModelResponse> response_appled2 = accountAPIFacade.getEmployeeEndpoint().savedJob(
                 request_saved, userId3_2,
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(200)),
@@ -192,24 +188,29 @@ public class SaveJob extends BaseBackendTest {
         //sa.assertTrue(response_appled2.size() == 0);
         //get Job
         //job.getIsSave () != null
-        sa.assertTrue(response_appled2 == null);
+        sa = new SoftAssert();
+        sa.assertTrue(response_appled2.size() == 0);
         sa.assertAll();
-
-        request = "{\"jobId\":" + jobId + "}";
+    }
+    @Test (priority = 2)
+    public void deleteSaveJob() throws IOException, InterruptedException, SQLException {
+        
+        String  request = "{\"jobId\":" + jobId + "}";
         Response response_delete  = accountAPIFacade.getEmployeeEndpoint().deleteSave(
                 request, userId3_1,
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(200)),
                 testDescription);
-
-        response_appled2  = accountAPIFacade.getEmployeeEndpoint().savedJob(
+       
+        String request_saved = "?maxId=" + Integer.toString(jobId + 1) + "&sinceId=" + Integer.toString(jobId - 1);
+        List<JobFeedModelResponse> response_appled2  = accountAPIFacade.getEmployeeEndpoint().savedJob(
                 request_saved, userId3_1,
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(200)),
                 testDescription);
 
-
-        sa.assertTrue(response_appled2 == null);
+        SoftAssert sa = new SoftAssert();
+        sa.assertTrue(response_appled2.size() == 0);
         sa.assertAll();
 
     /*    List<JobErrorResponse> response_appled1  = accountAPIFacade.getEmployeeEndpoint().applaedJob(

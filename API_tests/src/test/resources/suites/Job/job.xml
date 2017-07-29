@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Suite for account test." parallel="false">
-    <test name="Account tests.">
+<suite name="Suite for Create Job test." parallel="false">
+    <listeners>
+       <listener class-name="testRail.TestRailListener"/>
+   </listeners>
+    <test name="CreateJob tests.">
         <parameter name="createJob" value="createJob.json"/>
+        <parameter name="reportJob" value="reportJob.json"/>
         <classes>
-            <class name="stories.UserStory.JobTest"/>
+            <class name="stories.UserStory.JobsTest"/>
         </classes>
     </test>
 </suite>
+

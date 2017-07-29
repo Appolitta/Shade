@@ -2,7 +2,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Smoky test suite." parallel="false">
+    <!--   <listeners>
+        <listener class-name="testRail.TestRailListener"/>
+    </listeners> -->
     <suite-files>
-        <suite-file path="../documentpackage/documentPackage.xml"/>
+      <!--  <suite-file path="../documentpackage/documentPackage.xml"/>-->
+
+        <suite-file path="../account/account.xml"/>
+        <suite-file path="../account/aboutMe.xml" />
+        <suite-file path="../job/job.xml" />
+        <suite-file path="../job/jobFeed.xml" />
+        <suite-file path="../employee/applayjob.xml" />
+        <suite-file path="../employee/saveJob.xml" />
+        <suite-file path="../employer/asseptemployee.xml" />
+
     </suite-files>
 </suite>

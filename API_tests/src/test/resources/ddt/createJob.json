@@ -3,7 +3,6 @@
     "description": "Create job with correct data",
     "testCaseId": 0,
     "statusCode": 200,
-    "userId": 110,
     "dto":
     {
       "name": "string",
@@ -13,16 +12,292 @@
         "latitude": 15,
         "longitude": 15
       },
-      "startDate": "2017-07-29T09:06:53.932Z",
-      "endDate": "2017-07-30T09:06:53.932Z",
-      "startTime": "2017-07-29T09:06:53.932Z",
-      "endTime": "2017-07-30T09:06:53.932Z",
+      "startDate": "2017-10-29T09:06:53.932Z",
+      "endDate": "2017-10-30T09:06:53.932Z",
+      "startTime": "2017-10-29T09:06:53.932Z",
+      "endTime": "2017-10-30T09:06:53.932Z",
       "salary": 100,
       "salaryType": 1,
       "summary": "olololololo",
       "description": "bububububu"
     }
+  },
+
+  {
+    "description": "Create job with correct data",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "dto": {
+      "name": "Feed cat",
+      "categoryId": 2,
+      "location": {
+        "address": "Socialist st",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "startDate": "2017-10-23T11:04:30.722Z",
+      "endDate": "2017-10-24T11:04:30.722Z",
+      "startTime": "2017-10-23T11:04:30.722Z",
+      "endTime": "2017-10-24T11:04:30.722Z",
+      "salary": 500,
+      "salaryType": 1,
+      "summary": "Feed cat in flat",
+      "description": "Come and feed cat in flat"
+      }
+    },
+
+  {
+    "description": "Create job with correct data",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "dto": {
+      "name": "Feed cat",
+      "categoryId": 3,
+      "location": {
+        "address": "Socialist st",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "startDate": "2017-10-23T11:04:30.722Z",
+      "endDate": "2017-10-24T11:04:30.722Z",
+      "startTime": "2017-10-23T11:04:30.722Z",
+      "endTime": "2017-10-24T11:04:30.722Z",
+      "salary": 500,
+      "salaryType": 1,
+      "summary": "Feed cat in flat",
+      "description": "Come and feed cat in flat"
+    }
+  },
+  {
+    "description": "Create job with correct data",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "dto": {
+      "name": "Feed cat",
+      "categoryId": 4,
+      "location": {
+        "address": "Socialist st",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "startDate": "2017-10-23T11:04:30.722Z",
+      "endDate": "2017-10-24T11:04:30.722Z",
+      "startTime": "2017-10-23T11:04:30.722Z",
+      "endTime": "2017-10-24T11:04:30.722Z",
+      "salary": 500,
+      "salaryType": 1,
+      "summary": "Feed cat in flat",
+      "description": "Come and feed cat in flat"
+    }
+  },
+  {
+    "description": "Create job with correct data",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "dto": {
+      "name": "Feed cat",
+      "categoryId": 5,
+      "location": {
+        "address": "Socialist st",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "startDate": "2017-10-23T11:04:30.722Z",
+      "endDate": "2017-10-24T11:04:30.722Z",
+      "startTime": "2017-10-23T11:04:30.722Z",
+      "endTime": "2017-10-24T11:04:30.722Z",
+      "salary": 500,
+      "salaryType": 1,
+      "summary": "Feed cat in flat",
+      "description": "Come and feed cat in flat"
+    }
+  },
+  {
+    "description": "Create job with correct data",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "dto": {
+      "name": "Feed cat",
+      "categoryId": 6,
+      "location": {
+        "address": "Socialist st",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "startDate": "2017-10-23T11:04:30.722Z",
+      "endDate": "2017-10-24T11:04:30.722Z",
+      "startTime": "2017-10-23T11:04:30.722Z",
+      "endTime": "2017-10-24T11:04:30.722Z",
+      "salary": 500,
+      "salaryType": 1,
+      "summary": "Feed cat in flat",
+      "description": "Come and feed cat in flat"
+    }
+  },
+
+  {
+    "description": "Create job with correct data",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "dto": {
+      "name": "Feed cat",
+      "categoryId": 1,
+      "location": {
+        "address": "Socialist st",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "startDate": "2017-10-23T11:04:30.722Z",
+      "endDate": "2017-10-24T11:04:30.722Z",
+      "startTime": "2017-10-23T11:04:30.722Z",
+      "endTime": "2017-10-24T11:04:30.722Z",
+      "salary": 500,
+      "salaryType": 0,
+      "summary": "Feed cat in flat",
+      "description": "Come and feed cat in flat"
+    }
+  },
+
+  {
+    "description": "Create job with correct data",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "dto": {
+      "name": "Feed cat",
+      "categoryId": 2,
+      "location": {
+        "address": "Socialist st",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "startDate": "2017-10-23T11:04:30.722Z",
+      "endDate": "2017-10-24T11:04:30.722Z",
+      "startTime": "2017-10-23T11:04:30.722Z",
+      "endTime": "2017-10-24T11:04:30.722Z",
+      "salary": 500,
+      "salaryType": 0,
+      "summary": "Feed cat in flat",
+      "description": "Come and feed cat in flat"
+    }
+  },
+
+  {
+    "description": "Create job with correct data",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "dto": {
+      "name": "Feed cat",
+      "categoryId": 3,
+      "location": {
+        "address": "Socialist st",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "startDate": "2017-10-23T11:04:30.722Z",
+      "endDate": "2017-10-24T11:04:30.722Z",
+      "startTime": "2017-10-23T11:04:30.722Z",
+      "endTime": "2017-10-24T11:04:30.722Z",
+      "salary": 500,
+      "salaryType": 0,
+      "summary": "Feed cat in flat",
+      "description": "Come and feed cat in flat"
+    }
+  },
+
+  {
+    "description": "Create job with correct data",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "dto": {
+      "name": "Feed cat",
+      "categoryId": 4,
+      "location": {
+        "address": "Socialist st",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "startDate": "2017-10-23T11:04:30.722Z",
+      "endDate": "2017-10-24T11:04:30.722Z",
+      "startTime": "2017-10-23T11:04:30.722Z",
+      "endTime": "2017-10-24T11:04:30.722Z",
+      "salary": 500,
+      "salaryType": 0,
+      "summary": "Feed cat in flat",
+      "description": "Come and feed cat in flat"
+    }
+  },
+
+  {
+    "description": "Create job with correct data",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "dto": {
+      "name": "Feed cat",
+      "categoryId": 5,
+      "location": {
+        "address": "Socialist st",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "startDate": "2017-10-23T11:04:30.722Z",
+      "endDate": "2017-10-24T11:04:30.722Z",
+      "startTime": "2017-10-23T11:04:30.722Z",
+      "endTime": "2017-10-24T11:04:30.722Z",
+      "salary": 500,
+      "salaryType": 0,
+      "summary": "Feed cat in flat",
+      "description": "Come and feed cat in flat"
+    }
+  },
+
+  {
+    "description": "Create job with correct data",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "dto": {
+      "name": "Feed cat",
+      "categoryId": 6,
+      "location": {
+        "address": "Socialist st",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "startDate": "2017-10-23T11:04:30.722Z",
+      "endDate": "2017-10-24T11:04:30.722Z",
+      "startTime": "2017-10-23T11:04:30.722Z",
+      "endTime": "2017-10-24T11:04:30.722Z",
+      "salary": 500,
+      "salaryType": 0,
+      "summary": "Feed cat in flat",
+      "description": "Come and feed cat in flat"
+    }
+  },
+  {
+    "description": "Create job with correct data",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "dto": {
+      "name": "Feed cat",
+      "categoryId": 6,
+      "location": {
+        "address": "Socialist st",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "startDate": "2017-10-23T11:04:30.722Z",
+      "endDate": "2017-10-24T11:04:30.722Z",
+      "startTime": "2017-10-23T11:04:30.722Z",
+      "endTime": "2017-10-24T11:04:30.722Z",
+      "salary": 500,
+      "salaryType": 0,
+      "summary": "Feed cat in flat",
+      "description": "Come and feed cat in flat"
+    }
   }
+
+
+
+
 
 
 ]

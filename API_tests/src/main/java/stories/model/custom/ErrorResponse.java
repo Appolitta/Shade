@@ -1,7 +1,6 @@
 package stories.model.custom;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.sun.deploy.nativesandbox.comm.Response;
 
 import java.util.List;
 

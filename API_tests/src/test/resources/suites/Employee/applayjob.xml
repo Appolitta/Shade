@@ -3,8 +3,6 @@
 
 <suite name="Suite for account test." parallel="false">
     <test name="Account tests.">
-        <!--  <parameter name="applayjob" value="test.json"/> -->
-
           <classes>
               <class name="stories.UserStory.ApplayJob"/>
           </classes>

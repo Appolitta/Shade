@@ -17,17 +17,17 @@ public enum Categories {
     CATEGORY_2 (2, "Media & Tech", "Media & Tech"),
 
     @JsonProperty ("3")
-    CATEGORY_3 (3, "Education", "Education");
+    CATEGORY_3 (3, "Education", "Education"),
 
-/*    @JsonProperty ("3")
-    CATEGORY_4 (4, "Services", "Services");
+    @JsonProperty ("4")
+    CATEGORY_4 (4, "Services", "Services"),
 
-    @JsonProperty ("3")
-    CATEGORY_5 (5, "Home", "Home");
+    @JsonProperty ("5")
+    CATEGORY_5 (5, "Home", "Home"),
 
-    @JsonProperty ("3")
+    @JsonProperty ("6")
     CATEGORY_6 (6, "Delivery & Shopping", "Delivery & Shopping");
-*/
+
     private final int categoryId;
     private final String categoryDescription;
     private final String categoryDBName;

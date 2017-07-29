@@ -4,7 +4,7 @@
     <test name="Account tests.">
 
         <classes>
-            <class name="stories.UserStory.AcceptEmployee"/>
+            <class name="stories.UserStory.HiredJobs"/>
         </classes>
     </test>
 </suite>

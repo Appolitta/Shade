@@ -40,6 +40,30 @@
       "errorMessage": "The request is invalid.",
       "invalidFields":["Email"]
     }
+  },
+
+  {
+    "description": "Update user with in correct data",
+    "testCaseId": 0,
+    "statusCode": 400,
+    "dto": {
+      "firstName": "uyjhujhyujyhuyhjyuhyj",
+      "lastName": "string 234sd4r3ffa43fef24r2efsdcx ",
+      "email": "string@2bu.ru",
+      "aboutMe": "string",
+      "website": "123456789.......nnnnnnnnnnn",
+      "userType" : 6,
+      "location": {
+        "address": "string",
+        "latitude": 0,
+        "longitude": 0
+      },
+
+      "errorCode": 510,
+      "errorMessage": "The request is invalid.",
+      "invalidFields":["LastName"]
+    }
   }
+
 
 ]

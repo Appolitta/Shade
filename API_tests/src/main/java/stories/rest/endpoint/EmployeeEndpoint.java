@@ -4,6 +4,8 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.jayway.restassured.response.Response;
 import stories.model.shademodel.core.model.accountmodel.UserModel;
 import stories.model.shademodel.core.model.accountmodel.UserModelResponse;
+import stories.model.shademodel.core.model.chatmodel.ChatErrorResponse;
+import stories.model.shademodel.core.model.chatmodel.ChatResponse;
 import stories.model.shademodel.core.model.jobmodel.JobErrorResponse;
 import stories.model.shademodel.core.model.jobmodel.JobFeedModelResponse;
 import stories.model.shademodel.core.model.jobmodel.JobModel;
@@ -211,8 +213,8 @@ public class EmployeeEndpoint extends AbstractEndpoint{
     }
     //POST /employee/declinejoboffer
 
-   public Response declinejob(String request,
-                              Integer UserId,
+   public Object declinejob(String request,
+
                               final List<ResponseCheck> responseChecks,
                               final String description)
             throws  IOException{
@@ -225,11 +227,12 @@ public class EmployeeEndpoint extends AbstractEndpoint{
                 false,
                 responseChecks,
                 description);
-        if (response.getStatusCode() == 200) {
-            return response;
-        } else {
-            return response ;
-        }
+       if (response.getStatusCode() == 200) {
+           return responseMapper.readValue(response.asString(), ChatResponse.class);
+       } else {
+           return responseMapper.readValue(response.asString(), ChatErrorResponse.class);
+       }
+
     }
 
     //GET /employee/{userId}/hiredjobs

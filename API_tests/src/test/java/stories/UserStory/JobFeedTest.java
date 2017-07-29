@@ -53,7 +53,7 @@ public class JobFeedTest extends BaseBackendTest {
 
     @Test (description = "Feed the job positive test",
             dataProvider = "FeedJob",
-            groups = {"accountAPIFacade, test-duration.short", "test-state.working"}, priority = 1)
+            /*groups = {"accountAPIFacade, test-duration.short", "test-state.working"},*/ priority = 1)
 
     public void feedJobPositive(ITestContext context, final Map ddtSetMap) throws IOException, SQLException{
 

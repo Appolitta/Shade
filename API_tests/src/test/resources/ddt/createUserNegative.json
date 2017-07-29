@@ -136,7 +136,7 @@
   },
 
   {
-    "description": "Create user with incorrect data: password - qqq aaa7",
+    "description": "Create user with incorrect data: password - qqq aaa",
     "testCaseId": 0,
     "statusCode": 400,
     "dto":
@@ -176,7 +176,7 @@
     "dto":
     {
       "email": "test_user@ru.com",
-      "password": "qqqaaa7",
+      "password": "-",
       "firstName": "User",
       "lastName": "Test",
       "userType": 2,
@@ -220,7 +220,7 @@
     }
   },
   {
-    "description": "Create user with incorrect data: password - qqq aaa7",
+    "description": "Create user with incorrect data: password - qqqaaa7",
     "testCaseId": 0,
     "statusCode": 400,
     "dto":

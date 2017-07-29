@@ -24,6 +24,9 @@ public class JobModelResponse extends JobBase {
     @JsonProperty("name")
     private String name;
 
+    @JsonProperty("isReported")
+    private Boolean isReported;
+
  /*   @JsonProperty("salary")
     private int salary;
 */
@@ -87,5 +90,14 @@ public class JobModelResponse extends JobBase {
         this.poster = poster;
     }
 */
+
+
+    public Boolean getIsReported() {
+        return isReported;
+    }
+
+    public void setIsIsReported(Boolean isReported) {
+        this.isReported = isReported;
+    }
 }
 

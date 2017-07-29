@@ -101,6 +101,33 @@ public class JobEndpoint extends AbstractEndpoint  {
         }
     }
 
+    public Response reportJob(final String request,
+
+                            final List<ResponseCheck> responseChecks,
+                            final String description) throws IOException
+    {
+        Map<String, String> headers = new HashMap<>();
+        headers.put("Content-Type", "application/json");
+        Response response =  post(
+                "/reportjob",
+                headers,
+                request,
+                false,
+                responseChecks,
+                description);
+      /*  if (response.getStatusCode() == 200) {
+            return responseMapper.readValue(response.asString(), Response.class);
+        } else {
+            return responseMapper.readValue(response.asString(), Response.class);
+        }*/
+        if (response.getStatusCode() == 200) {
+            return  response;
+        } else {
+            return response;
+        }
+    }
+
+
 
         public void checkJobNull(final JobFeedModelResponse job){
             SoftAssert sa = new SoftAssert();

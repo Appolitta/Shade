@@ -21,16 +21,15 @@ public class ShadeJobModelResponse extends JobModel {
     @JsonProperty("errorResponse")
     private JobErrorResponse jobErrorResponse;
 
-
     @JsonProperty("salaryType")
-    private Integer salaryType;
+    private String salaryType;
 
 
-    public Integer getSalaryType() {
+    public String getSalaryType() {
         return salaryType;
     }
 
-    public void setSalaryType(Integer salaryType){
+    public void setSalaryType(String salaryType){
         this.salaryType = salaryType;
     }
 
