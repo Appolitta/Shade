@@ -2,11 +2,7 @@ package stories.rest;
 
 import stories.model.custom.BackendSettings;
 import stories.model.user.authenticator.AuthenticationData;
-import stories.rest.endpoint.EmployeeEndpoint;
-import stories.rest.endpoint.EmployerEndpoint;
-import stories.rest.endpoint.JobEndpoint;
-import stories.rest.endpoint.PackageEndpoint;
-import stories.rest.endpoint.AccountEndpoint;
+import stories.rest.endpoint.*;
 
 import java.io.IOException;
 
@@ -24,6 +20,7 @@ public class APIFacade {
     private JobEndpoint jobEndpoint;
     private EmployeeEndpoint employeeEndpoint;
     private EmployerEndpoint employerEndpoint;
+    private NotificationEndpoint notificationEndpoint;
 
     public APIFacade(AuthenticationData authData, BackendSettings backendSettings)
             throws IOException {
@@ -106,5 +103,20 @@ public class APIFacade {
         return employerEndpoint;
     }
 
+    /*---------Notification----------------*/
+
+    public NotificationEndpoint getNofication(){
+        if (null == notificationEndpoint) {
+            notificationEndpoint = new NotificationEndpoint(rest);
+        }
+        return notificationEndpoint;
+    }
+
+    public NotificationEndpoint getNotification() {
+        if (null == notificationEndpoint) {
+            notificationEndpoint = new NotificationEndpoint(rest);
+        }
+        return notificationEndpoint;
+    }
 }
 

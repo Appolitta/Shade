@@ -90,6 +90,28 @@ public class EmployerEndpoint extends AbstractEndpoint {
         }
     }
 
+
+    public Object cancelEmployee(String request,
+
+                                 final List<ResponseCheck> responseChecks,
+                                 final String description)
+            throws IOException {
+        Map<String, String> headers = new HashMap<>();
+        headers.put("Content-Type", "application/json");
+        Response response = post(
+                "acceptemployee",
+                headers,
+                request,
+                false,
+                responseChecks,
+                description);
+        if (response.getStatusCode() == 200) {
+            return responseMapper.readValue(response.asString(), ChatResponse.class);
+        } else {
+            return responseMapper.readValue(response.asString(), ChatErrorResponse.class);
+        }
+    }
+
 }
 
 

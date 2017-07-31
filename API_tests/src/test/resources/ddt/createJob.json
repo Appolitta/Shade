@@ -255,7 +255,7 @@
     "testCaseId": 0,
     "statusCode": 200,
     "dto": {
-      "name": "Feed cat",
+      "name": "Feed dog",
       "categoryId": 6,
       "location": {
         "address": "Socialist st",

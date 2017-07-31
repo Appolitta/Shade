@@ -6,7 +6,6 @@
     "userId": 110,
     "dto":
     {
-
       "salaryMin": "100"
     }
   },
@@ -18,7 +17,7 @@
     "dto":
     {
       "employerRating": "2",
-      "searchingPhrase":"Feed cat"
+      "searchingPhrase":"Feed"
      }
 
   },
@@ -34,8 +33,6 @@
 
   },
 
-
-
   {
     "description": "Feed job",
     "testCaseId": 0,
@@ -43,7 +40,7 @@
     "userId": 110,
     "dto":
     {
-      "searchingPhrase":"TestFeedJob"
+      "searchingPhrase":"Job"
     }
   },
 
@@ -76,7 +73,7 @@
     "userId": 110,
     "dto":
     {
-      "startDate": "2017-09-25"
+      "startDate": "2017-12-25"
     }
   },
 
@@ -124,6 +121,4 @@
 
     }
   }
-
-
 ]

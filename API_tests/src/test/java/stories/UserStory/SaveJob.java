@@ -16,6 +16,7 @@ import stories.util.ddto.DdtDataProvider;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -43,7 +44,7 @@ public class SaveJob extends BaseBackendTest {
     }
 
 */
-    @AfterClass(dependsOnMethods = "shutdownBaseBackendTest")
+ /*   @AfterClass(dependsOnMethods = "shutdownBaseBackendTest")
     public void deleteUser()
             throws IOException, SQLException {
         if (userId2 != 0) {
@@ -65,7 +66,7 @@ public class SaveJob extends BaseBackendTest {
                     "Deleting user with id: " + userId3_2 + ".");
         }
     }
-
+*/
     @BeforeClass()
     public void createEmployee() throws IOException, InterruptedException, SQLException {
         settingsManager = SettingsManager.getSettingsManager();
@@ -77,7 +78,9 @@ public class SaveJob extends BaseBackendTest {
         //----Create Employer
         //Create the test user data without the DataProvider
         UserModel newUser2 = new UserModel();
-        newUser2.setEmail("test_save_job_user2@distillery.com");
+        Date time = new Date();
+        String rendom = String.valueOf(time.getTime());
+        newUser2.setEmail("test_save_job_user2" + rendom + "@distillery.com");
         newUser2.setFirstName("First");
         newUser2.setLastName("Petriv");
         newUser2.setPassword("qqqaaa77");
@@ -94,7 +97,7 @@ public class SaveJob extends BaseBackendTest {
     // */ userId2 = 932;
         //----Create Employee
         UserModel newUser3 = new UserModel();
-        newUser3.setEmail("test_save_job_user3_1@distillery.com");
+        newUser3.setEmail("test_save_job_user3_1"+rendom+"@distillery.com");
         newUser3.setFirstName("First");
         newUser3.setLastName("Petriv");
         newUser3.setPassword("qqqaaa77");
@@ -108,7 +111,7 @@ public class SaveJob extends BaseBackendTest {
                 testDescription);
         userId3_1 = response.getAccess_token() != null ? response.getShadeUserModelResponse().getId() : 0;
 
-        newUser3.setEmail("test_save_job_user3_2@distillery.com");
+        newUser3.setEmail("test_save_job_user3_2"+rendom+"@distillery.com");
         response = (UserModelResponse) accountAPIFacade.getAccountEndpoint().createUser(
                 newUser3,
                 Collections.singletonList(
@@ -135,10 +138,10 @@ public class SaveJob extends BaseBackendTest {
         createJob.setTitle("SuperJobForSave");
         createJob.setCategory(1);
         createJob.setLocation(location);
-        createJob.setStartDate("2017-07-29T09:06:53.932Z");
-        createJob.setStartTime("2017-07-29T09:06:53.932Z");
-        createJob.setEndDate("2017-07-30T09:06:53.932Z");
-        createJob.setEndTime("2017-07-30T09:06:53.932Z");
+        createJob.setStartDate("2017-12-01T09:06:53.932Z");
+        createJob.setStartTime("2017-12-01T09:06:53.932Z");
+        createJob.setEndDate("2017-12-02T09:06:53.932Z");
+        createJob.setEndTime("2017-12-02T09:06:53.932Z");
         createJob.setSalary(100);
         createJob.setSalaryType("1");
         createJob.setSummary("olololololo");
@@ -171,16 +174,16 @@ public class SaveJob extends BaseBackendTest {
 */
         //----Get Applaed Job
         String request_saved = "?maxId=" + Integer.toString(jobId + 1) + "&sinceId=" + Integer.toString(jobId - 1);
-        List<JobFeedModelResponse> response_appled = accountAPIFacade.getEmployeeEndpoint().savedJob(
+        List<JobFeedModelResponse> response_saved = accountAPIFacade.getEmployeeEndpoint().savedJob(
                 request_saved, userId3_1,
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(200)),
                 testDescription);
         SoftAssert sa = new SoftAssert();
-        sa.assertTrue(response_appled.get(0).isSaved() == true);
+        sa.assertTrue(response_saved.get(0).isSaved() == true);
         sa.assertAll();
 
-        List<JobFeedModelResponse> response_appled2 = accountAPIFacade.getEmployeeEndpoint().savedJob(
+        List<JobFeedModelResponse> response_saved2 = accountAPIFacade.getEmployeeEndpoint().savedJob(
                 request_saved, userId3_2,
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(200)),
@@ -189,7 +192,7 @@ public class SaveJob extends BaseBackendTest {
         //get Job
         //job.getIsSave () != null
         sa = new SoftAssert();
-        sa.assertTrue(response_appled2.size() == 0);
+        sa.assertTrue(response_saved2.size() == 0);
         sa.assertAll();
     }
     @Test (priority = 2)
@@ -203,32 +206,16 @@ public class SaveJob extends BaseBackendTest {
                 testDescription);
        
         String request_saved = "?maxId=" + Integer.toString(jobId + 1) + "&sinceId=" + Integer.toString(jobId - 1);
-        List<JobFeedModelResponse> response_appled2  = accountAPIFacade.getEmployeeEndpoint().savedJob(
+        List<JobFeedModelResponse> response_saved2  = accountAPIFacade.getEmployeeEndpoint().savedJob(
                 request_saved, userId3_1,
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(200)),
                 testDescription);
 
         SoftAssert sa = new SoftAssert();
-        sa.assertTrue(response_appled2.size() == 0);
+        sa.assertTrue(response_saved2.size() == 0);
         sa.assertAll();
 
-    /*    List<JobErrorResponse> response_appled1  = accountAPIFacade.getEmployeeEndpoint().applaedJob(
-                request_save, userId2,
-                Collections.singletonList(
-                        ResponseCheckFactory.getStatusCodeCheck(200)),
-                testDescription);
-*/
-      // SoftAssert sa = new SoftAssert();
-
-
-     //   sa.assertNotNull(response_appled.get(0).getId());
-     //   sa.assertNotNull(response_appled2.get(0).getId());
-      // sa.assertAll();
-
     }
-
-
-
 
 }

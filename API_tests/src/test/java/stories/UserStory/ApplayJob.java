@@ -21,6 +21,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -83,7 +84,9 @@ public class ApplayJob  extends BaseBackendTest{
         //----Create Employer
         //Create the test user data without the DataProvider
         UserModel newUser2 = new UserModel();
-        newUser2.setEmail("test_applay_job_user2@distillery.com");
+        Date time = new Date();
+        String rendom = String.valueOf(time.getTime());
+        newUser2.setEmail("test_applay_job_user2" + rendom + "@distillery.com");
         newUser2.setFirstName("First");
         newUser2.setLastName("Petriv");
         newUser2.setPassword("qqqaaa77");
@@ -100,7 +103,7 @@ public class ApplayJob  extends BaseBackendTest{
     //  userId2 = 932;
         //----Create Employee
        UserModel newUser3 = new UserModel();
-        newUser3.setEmail("test_applay_job_user3_1@distillery.com");
+        newUser3.setEmail("test_applay_job_user3_1" + rendom + "@distillery.com");
         newUser3.setFirstName("First");
         newUser3.setLastName("Petriv");
         newUser3.setPassword("qqqaaa77");
@@ -114,7 +117,7 @@ public class ApplayJob  extends BaseBackendTest{
                 testDescription);
         userId3_1 = response.getAccess_token() != null ? response.getShadeUserModelResponse().getId() : 0;
 
-        newUser3.setEmail("test_applay_job_user3_2@distillery.com");
+        newUser3.setEmail("test_applay_job_user3_2" + rendom + "@distillery.com");
         response = (UserModelResponse) accountAPIFacade.getAccountEndpoint().createUser(
                 newUser3,
                 Collections.singletonList(
@@ -149,10 +152,10 @@ public class ApplayJob  extends BaseBackendTest{
         createJob.setTitle("SuperJobForApplay");
         createJob.setCategory(1);
         createJob.setLocation(location);
-        createJob.setStartDate("2017-07-29T09:06:53.932Z");
-        createJob.setStartTime("2017-07-29T09:06:53.932Z");
-        createJob.setEndDate("2017-07-30T09:06:53.932Z");
-        createJob.setEndTime("2017-07-30T09:06:53.932Z");
+        createJob.setStartDate("2017-12-29T09:06:53.932Z");
+        createJob.setStartTime("2017-12-29T09:06:53.932Z");
+        createJob.setEndDate("2017-12-30T09:06:53.932Z");
+        createJob.setEndTime("2017-12-30T09:06:53.932Z");
         createJob.setSalary(100);
         createJob.setSalaryType("1");
         createJob.setSummary("olololololo");
@@ -222,16 +225,16 @@ public class ApplayJob  extends BaseBackendTest{
         accountAPIFacade = new APIFacade(null, settingsManager.getDefaultBackendSettings());
         settingsManager = SettingsManager.getSettingsManager();
 
-        String request = "{\n" +
+        String request = "{" +
                 "  \"selfId\":" + userId3_1 +
                 ",  \"jobId\":" + jobId +
                 "}";
-        ChatResponse  response_decline = (ChatResponse) accountAPIFacade.getEmployeeEndpoint().declinejob(
+     /*   ChatResponse  response_decline = (ChatResponse) accountAPIFacade.getEmployeeEndpoint().declinejob(
                 request,
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(200)),
                 testDescription);
-
+*/
 
         ChatErrorResponse response_decline2 = (ChatErrorResponse) accountAPIFacade.getEmployeeEndpoint().declinejob(
                 request,

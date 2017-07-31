@@ -2,6 +2,7 @@ package stories.rest.endpoint;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.jayway.restassured.response.Response;
+import stories.model.shademodel.core.model.chatmodel.ChatErrorResponse;
 import stories.model.shademodel.core.model.jobmodel.*;
 import stories.rest.Rest;
 import stories.rest.responsecheck.ResponseCheck;
@@ -115,7 +116,7 @@ public class JobEndpoint extends AbstractEndpoint  {
                 false,
                 responseChecks,
                 description);
-      /*  if (response.getStatusCode() == 200) {
+     /*   if (response.getStatusCode() == 200) {
             return responseMapper.readValue(response.asString(), Response.class);
         } else {
             return responseMapper.readValue(response.asString(), Response.class);

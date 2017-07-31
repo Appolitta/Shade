@@ -203,9 +203,9 @@
     "dto":
     {
       "email": "test_user+test_user+test_user4@distillery.com",
-      "password": "zx5ett2829#$!()^%@-+=r",
+      "password": "zx5ett2829#$!()^",
       "firstName": "Test",
-      "lastName": "User jr.test-test",
+      "lastName": "User jrtest-test",
       "userType": 3
     }
   }

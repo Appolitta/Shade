@@ -2,6 +2,7 @@ package stories.rest.endpoint;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.jayway.restassured.response.Response;
+import stories.model.custom.ErrorResponse;
 import stories.model.shademodel.core.model.accountmodel.UserModel;
 import stories.model.shademodel.core.model.accountmodel.UserModelResponse;
 import stories.model.shademodel.core.model.chatmodel.ChatErrorResponse;
@@ -221,16 +222,16 @@ public class EmployeeEndpoint extends AbstractEndpoint{
         Map<String, String> headers = new HashMap<>();
         headers.put("Content-Type", "application/json");
         Response response =  post(
-                "/declinejoboffer",
+                "declinejoboffer",
                 headers,
                 request,
                 false,
                 responseChecks,
                 description);
        if (response.getStatusCode() == 200) {
-           return responseMapper.readValue(response.asString(), ChatResponse.class);
+           return responseMapper.readValue(response.asString(), Response.class);
        } else {
-           return responseMapper.readValue(response.asString(), ChatErrorResponse.class);
+           return responseMapper.readValue(response.asString(), ErrorResponse.class);
        }
 
     }
