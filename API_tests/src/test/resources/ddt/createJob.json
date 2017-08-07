@@ -1,14 +1,14 @@
 [
   {
-    "description": "Create job with correct data",
+    "description": "CATEGORY_ID = 1. Create job with correct data",
     "testCaseId": 0,
     "statusCode": 200,
     "dto":
     {
-      "name": "string",
+      "name": "Bake biscuits",
       "categoryId": 1,
       "location": {
-        "address": "ololo",
+        "address": "SPb. Nevskiy st.",
         "latitude": 15,
         "longitude": 15
       },
@@ -18,145 +18,180 @@
       "endTime": "2017-10-30T09:06:53.932Z",
       "salary": 100,
       "salaryType": 1,
-      "summary": "olololololo",
-      "description": "bububububu"
+      "summary": "Bake chocolate biscuits",
+      "description": "Bake 100 chocolate biscuits"
     }
   },
 
   {
-    "description": "Create job with correct data",
+    "description": "CATEGORY_ID = 2. Create job with correct data",
     "testCaseId": 0,
     "statusCode": 200,
-    "dto": {
-      "name": "Feed cat",
+    "dto":
+    {
+      "name": "Bake biscuits",
       "categoryId": 2,
       "location": {
-        "address": "Socialist st",
-        "latitude": 0,
-        "longitude": 0
+        "address": "SPb. Nevskiy st.",
+        "latitude": 15,
+        "longitude": 15
       },
-      "startDate": "2017-10-23T11:04:30.722Z",
-      "endDate": "2017-10-24T11:04:30.722Z",
-      "startTime": "2017-10-23T11:04:30.722Z",
-      "endTime": "2017-10-24T11:04:30.722Z",
-      "salary": 500,
-      "salaryType": 1,
-      "summary": "Feed cat in flat",
-      "description": "Come and feed cat in flat"
-      }
-    },
+      "startDate": "2017-10-29T09:06:53.932Z",
+      "endDate": "2017-10-30T09:06:53.932Z",
+      "startTime": "2017-10-29T09:06:53.932Z",
+      "endTime": "2017-10-30T09:06:53.932Z",
+      "salary": 100,
+      "salaryType": 0,
+      "summary": "Bake chocolate biscuits",
+      "description": "Bake 100 chocolate biscuits"
+    }
+  },
 
   {
-    "description": "Create job with correct data",
+    "description": "CATEGORY_ID = 3. Create job with correct data",
     "testCaseId": 0,
     "statusCode": 200,
-    "dto": {
-      "name": "Feed cat",
+    "dto":
+    {
+      "name": "Bake biscuits",
       "categoryId": 3,
       "location": {
-        "address": "Socialist st",
-        "latitude": 0,
-        "longitude": 0
+        "address": "SPb. Nevskiy st.",
+        "latitude": 15,
+        "longitude": 15
       },
-      "startDate": "2017-10-23T11:04:30.722Z",
-      "endDate": "2017-10-24T11:04:30.722Z",
-      "startTime": "2017-10-23T11:04:30.722Z",
-      "endTime": "2017-10-24T11:04:30.722Z",
-      "salary": 500,
+      "startDate": "2017-10-29T09:06:53.932Z",
+      "endDate": "2017-10-30T09:06:53.932Z",
+      "startTime": "2017-10-29T09:06:53.932Z",
+      "endTime": "2017-10-30T09:06:53.932Z",
+      "salary": 100,
       "salaryType": 1,
-      "summary": "Feed cat in flat",
-      "description": "Come and feed cat in flat"
-    }
-  },
-  {
-    "description": "Create job with correct data",
-    "testCaseId": 0,
-    "statusCode": 200,
-    "dto": {
-      "name": "Feed cat",
-      "categoryId": 4,
-      "location": {
-        "address": "Socialist st",
-        "latitude": 0,
-        "longitude": 0
-      },
-      "startDate": "2017-10-23T11:04:30.722Z",
-      "endDate": "2017-10-24T11:04:30.722Z",
-      "startTime": "2017-10-23T11:04:30.722Z",
-      "endTime": "2017-10-24T11:04:30.722Z",
-      "salary": 500,
-      "salaryType": 1,
-      "summary": "Feed cat in flat",
-      "description": "Come and feed cat in flat"
-    }
-  },
-  {
-    "description": "Create job with correct data",
-    "testCaseId": 0,
-    "statusCode": 200,
-    "dto": {
-      "name": "Feed cat",
-      "categoryId": 5,
-      "location": {
-        "address": "Socialist st",
-        "latitude": 0,
-        "longitude": 0
-      },
-      "startDate": "2017-10-23T11:04:30.722Z",
-      "endDate": "2017-10-24T11:04:30.722Z",
-      "startTime": "2017-10-23T11:04:30.722Z",
-      "endTime": "2017-10-24T11:04:30.722Z",
-      "salary": 500,
-      "salaryType": 1,
-      "summary": "Feed cat in flat",
-      "description": "Come and feed cat in flat"
-    }
-  },
-  {
-    "description": "Create job with correct data",
-    "testCaseId": 0,
-    "statusCode": 200,
-    "dto": {
-      "name": "Feed cat",
-      "categoryId": 6,
-      "location": {
-        "address": "Socialist st",
-        "latitude": 0,
-        "longitude": 0
-      },
-      "startDate": "2017-10-23T11:04:30.722Z",
-      "endDate": "2017-10-24T11:04:30.722Z",
-      "startTime": "2017-10-23T11:04:30.722Z",
-      "endTime": "2017-10-24T11:04:30.722Z",
-      "salary": 500,
-      "salaryType": 1,
-      "summary": "Feed cat in flat",
-      "description": "Come and feed cat in flat"
+      "summary": "Bake chocolate biscuits",
+      "description": "Bake 100 chocolate biscuits"
     }
   },
 
   {
-    "description": "Create job with correct data",
+    "description": "CATEGORY_ID = 4. Create job with correct data",
     "testCaseId": 0,
     "statusCode": 200,
-    "dto": {
-      "name": "Feed cat",
-      "categoryId": 1,
+    "dto":
+    {
+      "name": "Bake biscuits",
+      "categoryId": 4,
       "location": {
-        "address": "Socialist st",
-        "latitude": 0,
-        "longitude": 0
+        "address": "SPb. Nevskiy st.",
+        "latitude": 15,
+        "longitude": 15
       },
-      "startDate": "2017-10-23T11:04:30.722Z",
-      "endDate": "2017-10-24T11:04:30.722Z",
-      "startTime": "2017-10-23T11:04:30.722Z",
-      "endTime": "2017-10-24T11:04:30.722Z",
-      "salary": 500,
+      "startDate": "2017-10-29T09:06:53.932Z",
+      "endDate": "2017-10-30T09:06:53.932Z",
+      "startTime": "2017-10-29T09:06:53.932Z",
+      "endTime": "2017-10-30T09:06:53.932Z",
+      "salary": 100,
       "salaryType": 0,
-      "summary": "Feed cat in flat",
-      "description": "Come and feed cat in flat"
+      "summary": "Bake chocolate biscuits",
+      "description": "Bake 100 chocolate biscuits"
     }
   },
+
+
+  {
+    "description": "CATEGORY_ID = 5. Create job with correct data",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "dto":
+    {
+      "name": "Bake biscuits",
+      "categoryId": 5,
+      "location": {
+        "address": "SPb. Nevskiy st.",
+        "latitude": 15,
+        "longitude": 15
+      },
+      "startDate": "2017-10-29T09:06:53.932Z",
+      "endDate": "2017-10-30T09:06:53.932Z",
+      "startTime": "2017-10-29T09:06:53.932Z",
+      "endTime": "2017-10-30T09:06:53.932Z",
+      "salary": 100,
+      "salaryType": 1,
+      "summary": "Bake chocolate biscuits",
+      "description": "Bake 100 chocolate biscuits"
+    }
+  },
+  {
+    "description": "CATEGORY_ID = 6. Create job with correct data",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "dto":
+    {
+      "name": "Bake biscuits",
+      "categoryId": 6,
+      "location": {
+        "address": "SPb. Nevskiy st.",
+        "latitude": 15,
+        "longitude": 15
+      },
+      "startDate": "2017-10-29T09:06:53.932Z",
+      "endDate": "2017-10-30T09:06:53.932Z",
+      "startTime": "2017-10-29T09:06:53.932Z",
+      "endTime": "2017-10-30T09:06:53.932Z",
+      "salary": 100,
+      "salaryType": 0,
+      "summary": "Bake chocolate biscuits",
+      "description": "Bake 100 chocolate biscuits"
+    }
+  },
+
+
+  {
+    "description": "SALARY_TYPE = 1. Create job with correct data",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "dto":
+    {
+      "name": "Bake biscuits",
+      "categoryId": 6,
+      "location": {
+        "address": "SPb. Nevskiy st.",
+        "latitude": 15,
+        "longitude": 15
+      },
+      "startDate": "2017-10-29T09:06:53.932Z",
+      "endDate": "2017-10-30T09:06:53.932Z",
+      "startTime": "2017-10-29T09:06:53.932Z",
+      "endTime": "2017-10-30T09:06:53.932Z",
+      "salary": 100,
+      "salaryType": 1,
+      "summary": "Bake chocolate biscuits",
+      "description": "Bake 100 chocolate biscuits"
+    }
+  },
+
+  {
+    "description": "SALARY_TYPE = 0. Create job with correct data",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "dto":
+    {
+      "name": "Bake biscuits",
+      "categoryId": 6,
+      "location": {
+        "address": "SPb. Nevskiy st.",
+        "latitude": 15,
+        "longitude": 15
+      },
+      "startDate": "2017-10-29T09:06:53.932Z",
+      "endDate": "2017-10-30T09:06:53.932Z",
+      "startTime": "2017-10-29T09:06:53.932Z",
+      "endTime": "2017-10-30T09:06:53.932Z",
+      "salary": 100,
+      "salaryType": 0,
+      "summary": "Bake chocolate biscuits",
+      "description": "Bake 100 chocolate biscuits"
+    }
+  },
+
 
   {
     "description": "Create job with correct data",

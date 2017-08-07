@@ -3,7 +3,7 @@
 
 <suite name="All test." parallel="false" thread-count="1">
  <!--   <listeners>
-        <listener class-name="testRail.TestRailListener"/>
+        <listener class-naTestRailListenerener"/>
     </listeners> -->
     <suite-files>
         <suite-file path="account/account.xml"/>

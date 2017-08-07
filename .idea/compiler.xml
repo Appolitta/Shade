@@ -6,13 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="qaframework" />
-        <module name="shade-autotests" />
+        <module name="Shade" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="qaframework" target="1.8" />
-      <module name="shade-autotests" target="1.8" />
+      <module name="Shade" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

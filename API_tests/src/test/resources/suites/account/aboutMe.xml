@@ -2,7 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Suite for account test." parallel="false">
+    <listeners>
+        <listener class-name="testRail.TestRailListener"/>
+    </listeners>
     <test name="About Me tests.">
+        <parameter name="runId" value="313"/>
         <parameter name="About_me_employee" value="userAboutMeEmployee.json"/>
         <parameter name="About_me_employer" value="userAboutMeEmployer.json"/>
         <parameter name="About_me_neg" value="userAboutMeNeg.json"/>

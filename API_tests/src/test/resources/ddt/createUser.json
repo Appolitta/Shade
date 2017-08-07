@@ -1,13 +1,12 @@
 [
-
   {
-    "description": "Create user with correct data",
-    "testCaseId": 0,
+    "description": "PASSWORD. Create user with password length = 16",
+    "testCaseId": 168634,
     "statusCode": 200,
     "dto":
   {
     "email": "test_user@distillery.com",
-    "password": "qqqaaa77",
+    "password": "123456789qwertyu",
     "firstName": "test",
     "lastName": "User",
     "userType": 2
@@ -15,13 +14,13 @@
   },
 
   {
-    "description": "Create user with correct data",
-    "testCaseId": 0,
+    "description": "PASSWORD.Create user with password length = 15",
+    "testCaseId": 12614,
     "statusCode": 200,
     "dto":
     {
       "email": "test_user1@distillery.com",
-      "password": "qqqaaa77",
+      "password": "123456789qawsed",
       "firstName": "test-test",
       "lastName": "User",
       "userType": 2
@@ -29,13 +28,13 @@
   },
 
   {
-    "description": "Create user with correct data",
-    "testCaseId": 0,
+    "description": "PASSWORD.Create user with password length = 14",
+    "testCaseId": 169004,
     "statusCode": 200,
     "dto":
     {
       "email": "test_user2@distillery.com",
-      "password": "qqqaaa77",
+      "password": "123456789qawse",
       "firstName": "test",
       "lastName": "User-user",
       "userType": 2
@@ -43,13 +42,13 @@
   },
 
   {
-    "description": "Create user with correct data",
-    "testCaseId": 0,
+    "description": "PASSWORD.Create user with password length = 13",
+    "testCaseId": 169005,
     "statusCode": 200,
     "dto":
     {
-      "email": "test_user3@distillery.com",
-      "password": "qqqaaa77",
+      "email": "test_user13@distillery.com",
+      "password": "!@#$%^&*()_+=-",
       "firstName": "test",
       "lastName": "User-user",
       "userType": 2
@@ -57,130 +56,106 @@
   },
 
   {
-    "description": "Create user with correct data",
-    "testCaseId": 0,
+    "description": "PASSWORD.Create user with password length = 12",
+    "testCaseId": 169005,
     "statusCode": 200,
     "dto":
     {
-      "email": "test_user4@distillery.com",
-      "password": "qqqaaa77",
-      "firstName": "test jr. test-test",
-      "lastName": "User jr. test-test",
-      "userType": 2
-    }
-  },
-
-  {
-    "description": "Create user with correct data",
-    "testCaseId": 0,
-    "statusCode": 200,
-    "dto":
-    {
-      "email": "test_user+test_user+test_user@distillery.com",
-      "password": "qqqaaa77",
-      "firstName": "Test",
-      "lastName": "User",
-      "userType": 2
-    }
-  },
-
-  {
-    "description": "Create user with correct data",
-    "testCaseId": 0,
-    "statusCode": 200,
-    "dto":
-    {
-      "email": "test_user+test_user+test_user1@distillery.com",
-      "password": "zx5ett2829#$!()^",
-      "firstName": "Test",
-      "lastName": "User jr. test-test",
-      "userType": 2
-    }
-  },
-
-  {
-    "description": "Create user with correct data",
-    "testCaseId": 0,
-    "statusCode": 200,
-    "dto":
-    {
-      "email": "test_user+test_user+test_user2@distillery.com",
-      "password": "qqqaaa77",
-      "firstName": "Test",
-      "lastName": "User",
-      "userType": 2
-    }
-  },
-
-  {
-    "description": "Create user with correct data",
-    "testCaseId": 0,
-    "statusCode": 200,
-    "dto":
-    {
-      "email": "test_user5@distillery.com",
-      "password": "qqqaaa77",
-      "firstName": "test",
-      "lastName": "User",
-      "userType": 3
-    }
-  },
-
-  {
-    "description": "Create user with correct data",
-    "testCaseId": 0,
-    "statusCode": 200,
-    "dto":
-    {
-      "email": "test_user6@distillery.com",
-      "password": "qqqaaa77",
-      "firstName": "test-test",
-      "lastName": "User",
-      "userType": 3
-    }
-  },
-
-  {
-    "description": "Create user with correct data",
-    "testCaseId": 0,
-    "statusCode": 200,
-    "dto":
-    {
-      "email": "test_user7@distillery.com",
-      "password": "qqqaaa77",
+      "email": "test_user12@distillery.com",
+      "password": "[]<>*987;.,l",
       "firstName": "test",
       "lastName": "User-user",
-      "userType": 3
+      "userType": 2
     }
   },
 
   {
-    "description": "Create user with correct data",
-    "testCaseId": 0,
+    "description": "PASSWORD.Create user with password length = 11",
+    "testCaseId": 169005,
     "statusCode": 200,
     "dto":
     {
-      "email": "test_user8@distillery.com",
-      "password": "qqqaaa77",
+      "email": "test_user11@distillery.com",
+      "password": "1q2w3e4r%6t",
       "firstName": "test",
       "lastName": "User-user",
-      "userType": 3
+      "userType": 2
     }
   },
 
   {
-    "description": "Create user with correct data",
-    "testCaseId": 0,
+    "description": "PASSWORD.Create user with password length = 10",
+    "testCaseId": 169005,
+    "statusCode": 200,
+    "dto":
+    {
+      "email": "test_user10@distillery.com",
+      "password": "1q2w3e4r%6",
+      "firstName": "test",
+      "lastName": "User-user",
+      "userType": 2
+    }
+  },
+
+  {
+    "description": "PASSWORD.Create user with password length = 9",
+    "testCaseId": 169005,
     "statusCode": 200,
     "dto":
     {
       "email": "test_user9@distillery.com",
+      "password": "2qw3e4t5v",
+      "firstName": "test",
+      "lastName": "User-user",
+      "userType": 2
+    }
+  },
+
+  {
+    "description": "PASSWORD.Create user with password length = 8",
+    "testCaseId": 169005,
+    "statusCode": 200,
+    "dto":
+    {
+      "email": "test_user8@distillery.com",
+      "password": "2qw3e4t5v",
+      "firstName": "test",
+      "lastName": "User-user",
+      "userType": 2
+    }
+  },
+
+
+  {
+    "description": "MAIL.Create user with correct data",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "dto":
+    {
+      "email": "t@d.com",
       "password": "qqqaaa77",
-      "firstName": "test jr. test-test",
-      "lastName": "User jr. test-test",
+      "firstName": "Test",
+      "lastName": "User",
+      "userType": 2
+    }
+  },
+
+
+
+  {
+    "description": "LNAME. Create user with correct data",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "dto":
+    {
+      "email": "test_user7last@distillery.com",
+      "password": "qqqaaa77",
+      "firstName": "test",
+      "lastName": "User-user",
       "userType": 3
     }
   },
+
 
   {
     "description": "Create user with correct data",
@@ -188,7 +163,7 @@
     "statusCode": 200,
     "dto":
     {
-      "email": "test_user+test_user+test_user3@distillery.com",
+      "email": "test_user+test_user+test_ser3@distillery.com",
       "password": "qqqaaa77",
       "firstName": "Test",
       "lastName": "User",
@@ -208,7 +183,173 @@
       "lastName": "User jrtest-test",
       "userType": 3
     }
-  }
+  },
+
+  {
+    "description": "Create user with correct data",
+    "testCaseId": 0,
+    "statusCode": 200,
+    "dto":
+    {
+      "email": "test_user39@distillery.com",
+      "password": "qqqaaa77",
+      "firstName": "test jr. test-test",
+      "lastName": "User jr. test-test",
+      "userType": 3
+    }
+  },
 
 
-]
+    {
+      "description": "PASSWORD. Create user with password length = 16",
+      "testCaseId": 168634,
+      "statusCode": 200,
+      "dto":
+      {
+        "email": "test_user316@distillery.com",
+        "password": "133456789qwertyu",
+        "firstName": "test",
+        "lastName": "User",
+        "userType": 3
+      }
+    },
+
+    {
+      "description": "PASSWORD.Create user with password length = 15",
+      "testCaseId": 13614,
+      "statusCode": 200,
+      "dto":
+      {
+        "email": "test_user315@distillery.com",
+        "password": "133456789qawsed",
+        "firstName": "test-test",
+        "lastName": "User",
+        "userType": 3
+      }
+    },
+
+    {
+      "description": "PASSWORD.Create user with password length = 14",
+      "testCaseId": 169004,
+      "statusCode": 200,
+      "dto":
+      {
+        "email": "test_user143@distillery.com",
+        "password": "133456789qawse",
+        "firstName": "test",
+        "lastName": "User-user",
+        "userType": 3
+      }
+    },
+
+    {
+      "description": "PASSWORD.Create user with password length = 13",
+      "testCaseId": 169005,
+      "statusCode": 200,
+      "dto":
+      {
+        "email": "test_user133@distillery.com",
+        "password": "!@#$%^&*()_+=-",
+        "firstName": "test",
+        "lastName": "User-user",
+        "userType": 3
+      }
+    },
+
+    {
+      "description": "PASSWORD.Create user with password length = 12",
+      "testCaseId": 169005,
+      "statusCode": 200,
+      "dto":
+      {
+        "email": "test_user123@distillery.com",
+        "password": "[]<>*987;.,l",
+        "firstName": "test",
+        "lastName": "User-user",
+        "userType": 3
+      }
+    },
+
+    {
+      "description": "PASSWORD.Create user with password length = 11",
+      "testCaseId": 169005,
+      "statusCode": 200,
+      "dto":
+      {
+        "email": "test_user113@distillery.com",
+        "password": "1q3w3e4r%6t",
+        "firstName": "test",
+        "lastName": "User-user",
+        "userType": 3
+      }
+    },
+
+    {
+      "description": "PASSWORD.Create user with password length = 10",
+      "testCaseId": 169005,
+      "statusCode": 200,
+      "dto":
+      {
+        "email": "test_user103@distillery.com",
+        "password": "1q3w3e4r%6",
+        "firstName": "test",
+        "lastName": "User-user",
+        "userType": 3
+      }
+    },
+
+    {
+      "description": "PASSWORD.Create user with password length = 9",
+      "testCaseId": 169005,
+      "statusCode": 200,
+      "dto":
+      {
+        "email": "test_user93@distillery.com",
+        "password": "3qw3e4t5v",
+        "firstName": "test",
+        "lastName": "User-user",
+        "userType": 3
+      }
+    },
+
+    {
+      "description": "PASSWORD.Create user with password length = 8",
+      "testCaseId": 169005,
+      "statusCode": 200,
+      "dto":
+      {
+        "email": "test_user83@distillery.com",
+        "password": "3qw3e4t5v",
+        "firstName": "test",
+        "lastName": "User-user",
+        "userType": 3
+      }
+    },
+
+    {
+      "description": "PASSWORD.Create user with correct data",
+      "testCaseId": 0,
+      "statusCode": 200,
+      "dto":
+      {
+        "email": "test_user+test_user+test_user783@distillery.com",
+        "password": "qqqaaa77",
+        "firstName": "Test",
+        "lastName": "User",
+        "userType": 3
+      }
+    },
+
+    {
+      "description": "MAIL.Create user with correct data",
+      "testCaseId": 0,
+      "statusCode": 200,
+      "dto":
+      {
+        "email": "t@d3.com",
+        "password": "qqqaaa77",
+        "firstName": "Test",
+        "lastName": "User",
+        "userType": 3
+      }
+    }]

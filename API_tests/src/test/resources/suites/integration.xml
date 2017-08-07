@@ -1,11 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!--<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+-->
+<suite name="Integration suite." parallel="false" thread-count="1">
 
-<suite name="Integration suite." parallel="false">
+    <listeners>
+        <listener class-name="testRail.TestRailListener"/>
+    </listeners>
     <suite-files>
         <!--API tests.-->
-        <suite-file path="account/account.xml"/>
-        <suite-file path="documentpackage/documentPackage.xml"/>
+    <!--    <suite-file path="account/account.xml"/>
+        <suite-file path="documentpackage/documentPackage.xml"/>-->
+        <parameter name="runId" value="313"/>
+        <suite-file path="account/account.xml" />
+        <suite-file path="account/aboutMe.xml"/>
+        <suite-file path="job/job.xml"/>
+        <suite-file path="job/jobFeed.xml"/>
+        <suite-file path="employee/applayjob.xml"/>
+        <suite-file path="employee/saveJob.xml"/>
+        <suite-file path="employee/hireJob.xml"/>
+        <suite-file path="employer/asseptemployee.xml"/>
+
         <!--Business logic tests.-->
     </suite-files>
 </suite>

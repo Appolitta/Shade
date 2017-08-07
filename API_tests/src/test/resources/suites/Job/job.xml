@@ -6,10 +6,13 @@
        <listener class-name="testRail.TestRailListener"/>
    </listeners>
     <test name="CreateJob tests.">
+        <parameter name="runId" value="313"/>
         <parameter name="createJob" value="createJob.json"/>
         <parameter name="reportJob" value="reportJob.json"/>
+        <parameter name="reportJobNeg" value="reportJobNeg.json"/>
         <classes>
             <class name="stories.UserStory.JobsTest"/>
+            <class name="stories.UserStory.ApplayJob"/>
         </classes>
     </test>
 </suite>
