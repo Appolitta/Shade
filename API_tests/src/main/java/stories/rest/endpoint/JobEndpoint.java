@@ -2,6 +2,7 @@ package stories.rest.endpoint;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.jayway.restassured.response.Response;
+import stories.model.custom.ErrorResponse;
 import stories.model.shademodel.core.model.chatmodel.ChatErrorResponse;
 import stories.model.shademodel.core.model.jobmodel.*;
 import stories.rest.Rest;
@@ -102,7 +103,7 @@ public class JobEndpoint extends AbstractEndpoint  {
         }
     }
 
-    public Response reportJob(final String request,
+    public Object reportJob(final String request,
 
                             final List<ResponseCheck> responseChecks,
                             final String description) throws IOException
@@ -124,7 +125,7 @@ public class JobEndpoint extends AbstractEndpoint  {
         if (response.getStatusCode() == 200) {
             return  response;
         } else {
-            return response;
+            return responseMapper.readValue(response.asString(), ErrorResponse.class);
         }
     }
 

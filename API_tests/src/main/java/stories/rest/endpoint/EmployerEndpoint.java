@@ -70,7 +70,6 @@ public class EmployerEndpoint extends AbstractEndpoint {
     }
 
     public Object acceptEmployee(String request,
-
                                  final List<ResponseCheck> responseChecks,
                                  final String description)
             throws IOException {
@@ -84,12 +83,32 @@ public class EmployerEndpoint extends AbstractEndpoint {
                 responseChecks,
                 description);
         if (response.getStatusCode() == 200) {
-            return responseMapper.readValue(response.asString(), ChatResponse.class);
+                return responseMapper.readValue(response.asString(), ChatResponse.class);
         } else {
-            return responseMapper.readValue(response.asString(), ChatErrorResponse.class);
+                return responseMapper.readValue(response.asString(), ChatErrorResponse.class);
         }
     }
 
+
+    public Object acceptEmployee2(String request,
+                                  final List<ResponseCheck> responseChecks,
+                                 final String description)
+            throws IOException {
+        Map<String, String> headers = new HashMap<>();
+        headers.put("Content-Type", "application/json");
+        Response response = post(
+                "acceptemployee",
+                headers,
+                request,
+                false,
+                responseChecks,
+                description);
+        if (response.getStatusCode() == 200) {
+            return response; /*responseMapper.readValue(response.asString(), Response.class);*/
+        } else {
+            return responseMapper.readValue(response.asString(), ErrorResponse.class);
+        }
+    }
 
     public Object cancelEmployee(String request,
 
@@ -99,18 +118,42 @@ public class EmployerEndpoint extends AbstractEndpoint {
         Map<String, String> headers = new HashMap<>();
         headers.put("Content-Type", "application/json");
         Response response = post(
-                "acceptemployee",
+                "canceljoboffer",
                 headers,
                 request,
                 false,
                 responseChecks,
                 description);
         if (response.getStatusCode() == 200) {
-            return responseMapper.readValue(response.asString(), ChatResponse.class);
+            return response; /*responseMapper.readValue(response.asString(), Response.class);*/
         } else {
-            return responseMapper.readValue(response.asString(), ChatErrorResponse.class);
+            return responseMapper.readValue(response.asString(), ErrorResponse.class);
         }
     }
+
+    public Response readApplication(String request,
+
+                                  final List<ResponseCheck> responseChecks,
+                                  final String description)
+            throws IOException {
+        Map<String, String> headers = new HashMap<>();
+        headers.put("Content-Type", "application/json");
+        Response response = put(
+                "readapplication",
+                headers,
+                request,
+                false,
+                responseChecks,
+                description);
+        if (response.getStatusCode() == 200) {
+            return response;
+        } else {
+            return response;
+        }
+    }
+
+
+
 
 }
 

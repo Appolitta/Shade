@@ -229,11 +229,16 @@ public class EmployeeEndpoint extends AbstractEndpoint{
                 responseChecks,
                 description);
        if (response.getStatusCode() == 200) {
-           return responseMapper.readValue(response.asString(), Response.class);
+           return response; /*responseMapper.readValue(response.asString(), Response.class);*/
        } else {
            return responseMapper.readValue(response.asString(), ErrorResponse.class);
        }
-
+/*
+       if (response.getStatusCode() == 200) {
+           return response;
+       } else {
+           return response;
+       }*/
     }
 
     //GET /employee/{userId}/hiredjobs

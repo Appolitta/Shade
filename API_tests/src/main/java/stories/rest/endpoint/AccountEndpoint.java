@@ -205,7 +205,29 @@ public class AccountEndpoint extends AbstractEndpoint {
                 description);
     }
 
+    /**
+     * Sent devicetoken
+     * @param responseChecks response checks.
+     * @param description    description of your request.
+     * @return raw response containing user's info.
+     *
+     */
+    public Response deviseToken(String request,
+                                   final List<ResponseCheck> responseChecks,
+                                   final String description)
+        throws  IOException{
+        Map<String, String> headers = new HashMap<>();
+        headers.put("Content-Type", "application/json");
 
+        Response response = post("/devicetoken",
+                headers,
+                request,
 
+                false,
+                responseChecks,
+                description);
+        return response;
+
+    }
 
 }

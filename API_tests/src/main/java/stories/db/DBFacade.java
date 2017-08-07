@@ -71,7 +71,6 @@ public class DBFacade extends DBDao {
 
     public Integer JobCountForRating(String rating, String sqlRequest){
 
-        // String sql = "SELECT COUNT (*) FROM public.\"Job\" WHERE \"" + field + "\"" + " = '" +  value + "'";
         String sql = "select count(1) from\n" +
                 "(select *, \"ReviewsSum\" / \"ReviewsCount\" as \"Rating\" from \"User\") as users\n" +
                 "inner join public.\"Job\" jobs on jobs.\"PosterId\" = users.\"Id\"\n"+
@@ -94,5 +93,39 @@ public class DBFacade extends DBDao {
     }
 
 
+    public Integer getApplication(int userId, int jobId){
+
+        String sql = "SELECT * FROM public.\"Application\" WHERE \"UserId\" = " + userId + " and \"JobId\" = " + jobId;
+        try {
+            int id = 0;
+
+            SqlRowSet set = jdbcTemplatePg.queryForRowSet(sql);
+            if (set.next()) {
+                id = set.getInt("id");
+            }
+            return id;
+        }
+        catch (EmptyResultDataAccessException err) {
+            return 0;
+        }
+    }
+/*
+    public List<Integer> getNotification(int userId, int chatId){
+        String sql = "SELECT COUNT (*) FROM public.\"Job\" WHERE \"IsDeleted\" = false and " + sqlRequest;
+        try {
+            int count = 0;
+            List<SqlRowSet> set = jdbcTemplatePg.queryForList(sql);
+
+            if (set.next()) {
+                count = set.getInt("count");
+            }
+            return count;
+        }
+        catch (EmptyResultDataAccessException err) {
+            return 0;
+        }
+    }
+
+*/
 }
 
