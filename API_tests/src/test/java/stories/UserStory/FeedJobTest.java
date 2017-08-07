@@ -8,8 +8,6 @@ import org.testng.annotations.Test;
 import stories.db.DBFacade;
 import stories.managers.SettingsManager;
 import stories.model.job.Job;
-import stories.model.shademodel.core.model.accountmodel.UserModel;
-import stories.model.shademodel.core.model.accountmodel.UserModelResponse;
 import stories.model.shademodel.core.model.jobmodel.JobModel;
 import stories.model.shademodel.core.model.jobmodel.JobFeedModelResponse;
 
@@ -29,15 +27,15 @@ import java.util.*;
 /**
  * Created by wizard on 04.07.2017.
  */
-public class JobFeedTest extends BaseBackendTest {
+public class FeedJobTest extends BaseBackendTest {
 
     private SettingsManager settingsManager;
     private APIFacade accountAPIFacade;
     private DBFacade testDBFacade;
     private static final String FEED_JOB = "FeedJob";
-    private static final String CREATE_JOB = "CreateJob";
-    public int userId2 = 0;
+
     @BeforeClass
+
 
     //The DataProvider for the positive test
     @DataProvider(name = "FeedJob")
@@ -52,68 +50,11 @@ public class JobFeedTest extends BaseBackendTest {
                 settingsManager.getDdtDataPath());
     }
 
-    @DataProvider(name = "CreateJob")
-    private Object[][] CreateJob(ITestContext context)
-            throws IOException {
-        settingsManager = SettingsManager.getSettingsManager();
-        testDBFacade = new DBFacade( settingsManager.getDefaultBackendSettings());
-        accountAPIFacade = new APIFacade(null, settingsManager.getDefaultBackendSettings());
-        DdtDataProvider ddtDataProvider = new DdtDataProvider();
-        return  ddtDataProvider.ddtProvider(
-                context, CREATE_JOB,
-                settingsManager.getDdtDataPath());
-    }
-    @Test (description = "Feed the job positive test",
-           /* dataProvider = "CreateJob",*/
-                    priority = 1)
-    public void CreateUser() throws IOException, SQLException {
-        UserModel newUser2 = new UserModel();
-        Date time = new Date();
-        String random = String.valueOf(time.getTime());
-        String email = "test_job_feed_user2_" + random + "_@distillery.com";
-        newUser2.setEmail(email);
-        newUser2.setFirstName("Hercule");
-        newUser2.setLastName("Poirot");
-        newUser2.setPassword("qqqaaa77");
-        newUser2.setUserType(2);
-
-        //Sending the API request to the "/account/signup" endpoint and waiting 200 status code
-        // UserModelResponse response = null;
-        UserModelResponse responseUser = (UserModelResponse) accountAPIFacade.getAccountEndpoint().createUser(
-                newUser2,
-                Collections.singletonList(
-                        ResponseCheckFactory.getStatusCodeCheck(200)),
-                testDescription);
-
-        userId2 = responseUser.getShadeUserModelResponse().getId();
-        //установить рейтиег пользователя
-
-    }
-        @Test(description = "Create the job positive test",
-                dataProvider = "CreateJob",
-        /*    groups = {"accountAPIFacade, test-duration.short", "test-state.working"},*/ priority = 1)
-        public void createJob(final Map ddtSetMap)
-            throws IOException, InterruptedException, SQLException {
-        DdtoSet<JobModel> ddtoSet =
-                    mapper.convertValue(ddtSetMap, new TypeReference<DdtoSet<JobModel>>() {
-                    });
-
-            //Sending the API request to the "/account/signup" endpoint and waiting 200 status code
-        final JobModel createJobRequest = ddtoSet.getDto();
-        JobModelResponse responseJob = null;
-        responseJob = (JobModelResponse) accountAPIFacade.getJobEndpoint().createJob(
-                    createJobRequest, userId2,
-                    Collections.singletonList(
-                            ResponseCheckFactory.getStatusCodeCheck(200)),
-                    testDescription);
-        responseJob.getId();
-        System.out.println(responseJob.getId());
-   }
 
 
     @Test (description = "Feed the job positive test",
             dataProvider = "FeedJob",
-            /*groups = {"accountAPIFacade, test-duration.short", "test-state.working"},*/ priority = 2)
+           /* groups = {"accountAPIFacade, test-duration.short", "test-state.working"},*/ priority = 1)
 
     public void feedJobPositive(ITestContext context, final Map ddtSetMap) throws IOException, SQLException{
 
@@ -133,7 +74,7 @@ public class JobFeedTest extends BaseBackendTest {
         if (dto.get("searchingPhrase") != null) {
             String name = dto.get("searchingPhrase");
             feedJobRequest = feedJobRequest + "searchingPhrase" + "=" + name + "&";
-            sqlRequest = sqlRequest + "\"Name\" LIKE" + "'%" + name + "%'" + " and ";
+            sqlRequest = sqlRequest + "\"Name\"" + " = '" + name + "'" + " and ";
             System.out.println("searchingPhrase" + "=" + name);
         }
 
@@ -154,7 +95,7 @@ public class JobFeedTest extends BaseBackendTest {
         if (dto.get("salaryMin") != null) {
             String salaryMin = dto.get("salaryMin");
             feedJobRequest = feedJobRequest + "salaryMin" + "=" + salaryMin + "&";
-            sqlRequest = sqlRequest + "\"Salary\"" + " >= " + salaryMin + " and ";
+            sqlRequest = sqlRequest + "\"Salary\"" + " > " + salaryMin + " and ";
         }
 
         if (dto.get("recordsCount") != null) {
@@ -188,10 +129,7 @@ public class JobFeedTest extends BaseBackendTest {
         String sqlRequest2 = String.join(" ", words);
         if (count == 0) {
             if (dto.get("employerRating") != null) {
-                if(sqlRequest2.length() != 0)
-                    sqlRequest2 = " and " + sqlRequest2;
-                else sqlRequest2 = "    ";
-                count = testDBFacade.JobCountForRating(dto.get("employerRating"), sqlRequest2);
+                count = testDBFacade.JobCountForRating(dto.get("employerRating"),sqlRequest2);
             }
             else
                 count = testDBFacade.JobCount(sqlRequest2);
@@ -208,10 +146,10 @@ public class JobFeedTest extends BaseBackendTest {
          List<JobFeedModelResponse> response =  new ArrayList<>();
 
          response = accountAPIFacade.getJobEndpoint().feedJob(
-                feedJobRequest,
-                Collections.singletonList(
-                        ResponseCheckFactory.getStatusCodeCheck(ddtoSet.getStatusCode())),
-                testDescription);
+                   feedJobRequest,
+                    Collections.singletonList(
+                            ResponseCheckFactory.getStatusCodeCheck(ddtoSet.getStatusCode())),
+                    testDescription);
 
          String test_data = ddtoSet.getDescription() + "\ncreate job test\nsetId:"
                     + testCaseId + "\n" + ddtoSet.getDescription() + "\n(caseId:" + testCaseId + ")\n[ERROR] ";
@@ -242,7 +180,7 @@ public class JobFeedTest extends BaseBackendTest {
 
               //by categoryId
              if (dto.get("categoryId") != null) {
-                 sa.assertTrue(response.size() > 0, "Empty  response after request by categoryId!");
+                 sa.assertTrue(response.size() > 0, "Empty  response after request by name!");
                  num = response.size();
                  index = 0;
                  while (num > 0) {
@@ -257,7 +195,7 @@ public class JobFeedTest extends BaseBackendTest {
                }
                //by startDate
              if (dto.get("startDate") != null) {
-                   sa.assertTrue(response.size() > 0, "Empty  response after request by startDate!");
+                   sa.assertTrue(response.size() > 0, "Empty  response after request by name!");
                    num = response.size();
                    index = 0;
                    while (num > 0) {
@@ -274,14 +212,14 @@ public class JobFeedTest extends BaseBackendTest {
 
                //by salaryMin
              if (dto.get("salaryMin") != null) {
-                   sa.assertTrue(response.size() > 0, "Empty  response after request by salaryMin!");
+                   sa.assertTrue(response.size() > 0, "Empty  response after request by name!");
                    num = response.size();
                    index = 0;
                    while (num > 0) {
                        sa.assertNotNull(response.get(index), "Null count parameters!");
                        JobFeedModelResponse job = response.get(index);
                        response.get(index);
-                       sa.assertTrue(job.getSalary() >= Integer.valueOf(dto.get("salaryMin")));
+                       sa.assertTrue(job.getSalary() == Integer.valueOf(dto.get("salaryMin")));
                        num--;
                        index++;
                        System.out.println("All good of categoryId");
@@ -303,7 +241,7 @@ public class JobFeedTest extends BaseBackendTest {
                        sa.assertNotNull(response.get(index), "Null count parameters!");
                        JobFeedModelResponse job = response.get(index);
                        response.get(index);
-                       sa.assertTrue(job.getId() < Integer.valueOf(dto.get("maxId")));
+                       sa.assertTrue(job.getId() <= Integer.valueOf(dto.get("maxId")));
                        num--;
                        index++;
                        System.out.println("All good of maxId");
@@ -319,7 +257,7 @@ public class JobFeedTest extends BaseBackendTest {
                        sa.assertNotNull(response.get(index), "Null count parameters!");
                        JobFeedModelResponse job = response.get(index);
                        response.get(index);
-                       sa.assertTrue(job.getId() > Integer.valueOf(dto.get("sinceId")));
+                       sa.assertTrue(job.getId() >= Integer.valueOf(dto.get("sinceId")));
                        num--;
                        index++;
                        System.out.println("All good of sinceId");
@@ -327,7 +265,7 @@ public class JobFeedTest extends BaseBackendTest {
              }
 
              if (dto.get("employerRating") != null) {
-                 sa.assertTrue(response.size() > 0, "Empty  response after request by employerRating!");
+                 sa.assertTrue(response.size() > 0, "Empty  response after request by sinceId!");
                  num = response.size();
                  index = 0;
                  while (num > 0) {
@@ -343,10 +281,7 @@ public class JobFeedTest extends BaseBackendTest {
 
 
            }
-           else {
-             sa.assertTrue(count == response.size());
-             System.out.println("!!!!!!!!!!!!!!Return invalid count of job!!!!!!!!!!!!!!");
-         }
+           else System.out.println("Return invalid count of job");
         sa.assertAll();
 
 

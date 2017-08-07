@@ -1,6 +1,7 @@
 package stories.UserStory;
 import com.jayway.restassured.response.Response;
 import org.testng.annotations.*;
+import stories.db.DBFacade;
 import stories.managers.SettingsManager;
 import stories.model.custom.ErrorResponse;
 import stories.model.shademodel.core.model.accountmodel.UserModel;
@@ -33,7 +34,7 @@ public class AcceptEmployee extends BaseBackendTest {
 
     private static final String APPLAY_JOB = "applayJob";
     private SettingsManager settingsManager;
-
+    private DBFacade testDBFacade;
     private APIFacade accountAPIFacade;
     public Integer userId2 = 0;
     public Integer userId3_1 = 0;
@@ -41,6 +42,8 @@ public class AcceptEmployee extends BaseBackendTest {
     public Integer userId3_3 = 0;
     public String request = "";
     public Integer jobId = 0;
+
+
 
 
     /*@DataProvider(name = "applayJob")
@@ -156,7 +159,7 @@ public class AcceptEmployee extends BaseBackendTest {
         public void acceptEmployeeJob() throws IOException, InterruptedException, SQLException {
         accountAPIFacade = new APIFacade(null, settingsManager.getDefaultBackendSettings());
         settingsManager = SettingsManager.getSettingsManager();
-
+        testDBFacade = new DBFacade( settingsManager.getDefaultBackendSettings());
         //----Create Job
         //Sending the API request to the "/account/signup" endpoint and waiting 200 status code
         final JobModel createJob = new JobModel();
@@ -208,16 +211,15 @@ public class AcceptEmployee extends BaseBackendTest {
                         ResponseCheckFactory.getStatusCodeCheck(200)),
                 testDescription);*/
         //----Get Applaed Job
-        String request_appled = "?maxId=" + Integer.toString(responseJob.getId() + 1) + "&sinceId=" + Integer.toString(responseJob.getId() - 1);
+        String request_appled = "?maxId=" + (jobId + 1) + "&sinceId=" + (jobId - 1);
         List<JobFeedModelResponse> response_appled = accountAPIFacade.getEmployeeEndpoint().applaedJob(
                 request_appled, userId3_1,
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(200)),
                 testDescription);
         SoftAssert sa = new SoftAssert();
-        accountAPIFacade.getJobEndpoint().checkJobNull(response_appled.get(0));
-        System.out.print(response_appled.get(0).getId());
-        sa.assertNotNull(response_appled.get(0).getId());
+  //      accountAPIFacade.getJobEndpoint().checkJobNull(response_appled.get(0));
+  //      sa.assertNotNull(response_appled.get(0).getId());
 
 
         List<JobFeedModelResponse> response_appled2 = accountAPIFacade.getEmployeeEndpoint().applaedJob(
@@ -225,20 +227,30 @@ public class AcceptEmployee extends BaseBackendTest {
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(200)),
                 testDescription);
-        accountAPIFacade.getJobEndpoint().checkJobNull(response_appled2.get(0));
-        System.out.print(response_appled2.get(0).getId());
-        sa.assertNotNull(response_appled2.get(0).getId());
-        sa.assertAll();
+  //      accountAPIFacade.getJobEndpoint().checkJobNull(response_appled2.get(0));
+  ///      System.out.print(response_appled2.get(0).getId());
+  //     sa.assertNotNull(response_appled2.get(0).getId());
+  //     sa.assertAll();
 
-
-
-  /*      List<JobErrorResponse> response_appled1 = accountAPIFacade.getEmployeeEndpoint().applaedJob(
+         /*      List<JobErrorResponse> response_appled1 = accountAPIFacade.getEmployeeEndpoint().applaedJob(
                 request_appled, userId2,
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(200)),
                 testDescription);
 */
         //  SoftAssert sa = new SoftAssert();
+
+        Integer appId = testDBFacade.getApplication(userId3_2, jobId);
+
+        request = "{\"selfId\":" + userId2 + ",\"applicationId\":" + appId + "}" ;
+         Response read_applay = accountAPIFacade.getEmployerEndpoint().readApplication(
+                request,
+                Collections.singletonList(
+                        ResponseCheckFactory.getStatusCodeCheck(200)),
+                testDescription);
+        sa.assertNotNull(read_applay);
+
+
 
  //       TimeUnit.SECONDS.sleep(60);//временный костыль
         //accempt employee wich applay the job
@@ -276,16 +288,9 @@ public class AcceptEmployee extends BaseBackendTest {
         sa.assertTrue(response_error.getErrorMessage().equals("Request from this employee for this job is not found."));
         sa.assertAll();
 
-        //   int error_code = error_response.getErrorCode();
-
-  /*      String error_message = error_response.getErrorMessage();
-        sa.assertTrue(error_code == 105);
-        sa.assertTrue(error_message.equals("The user with the same email already exists."));
-        sa.assertAll();
-*/
 
         //accempt employee twise
-        request = "{\"selfId\":" + userId2 + ",\"employeeId\":" + userId3_1 + ",\"jobId\":" + responseJob.getId() + "}";
+        request = "{\"selfId\":" + userId2 + ",\"employeeId\":" + userId3_1 + ",\"jobId\":" + jobId + "}";
 
         response_error = (ChatErrorResponse) accountAPIFacade.getEmployerEndpoint().acceptEmployee(
                 request,
@@ -304,20 +309,94 @@ public class AcceptEmployee extends BaseBackendTest {
 
         sa.assertAll();
 
+
+
     }
 
         @Test (/*description = "Applay Job",
             dataProvider = "applayJob",*/
              priority = 2)
         public void cancelEmployee() throws IOException, InterruptedException, SQLException {
+            testDBFacade = new DBFacade( settingsManager.getDefaultBackendSettings());
+            request = "{\"selfId\":" + userId2 + ",\"employeeId\":" + userId3_1 + ",\"jobId\":" + jobId + "}";
+            SoftAssert sa = new SoftAssert();
+            final JobModel createJob = new JobModel();
+            final Location location = new Location();
+            location.setId(1);
+//        location.setLatitude();
+//        location.setLongitude();
+            location.setAddress("strit");
+
+
+            createJob.setTitle("SuperJobForApplay");
+            createJob.setCategory(1);
+            createJob.setLocation(location);
+            createJob.setStartDate("2017-12-01T09:06:53.932Z");
+            createJob.setStartTime("2017-12-01T09:06:53.932Z");
+            createJob.setEndDate("2017-12-02T09:06:53.932Z");
+            createJob.setEndTime("2017-12-02T09:06:53.932Z");
+            createJob.setSalary(100);
+            createJob.setSalaryType("1");
+            createJob.setSummary("olololololo");
+            createJob.setDescription("bububububu");
+            createJob.setUserId(userId2);
+
+            JobModelResponse responseJob = null;
+            responseJob = (JobModelResponse) accountAPIFacade.getJobEndpoint().createJob(
+                    createJob, userId2,
+                    Collections.singletonList(
+                            ResponseCheckFactory.getStatusCodeCheck(200)),
+                    testDescription);
+            int jobId = responseJob.getId();
+    /*        ChatResponse response_accept = (ChatResponse) accountAPIFacade.getEmployerEndpoint().acceptEmployee(
+                    request,
+                    Collections.singletonList(
+                            ResponseCheckFactory.getStatusCodeCheck(200)),
+                    testDescription);
+
+            SoftAssert sa = new SoftAssert();
+            sa.assertNotNull(response_accept.getChat());
+            sa.assertNotNull(response_accept.getChat().getId());
+            //      sa.assertNotNull(response_accept.getOpponentInfo().getId());
+            //      sa.assertNotNull(response_accept.getOpponentInfo().getFirstName());
+            //     sa.assertNotNull(response_accept.getJobInfo());
+            sa.assertAll();
+*/          request  = "{\"jobId\":" + jobId + "}";
+            Response response_applay2 = accountAPIFacade.getEmployeeEndpoint().applayJob(
+                    request, userId3_2,
+                    Collections.singletonList(
+                            ResponseCheckFactory.getStatusCodeCheck(200)),
+                    testDescription);
+
+            request = "{\"selfId\":" + userId2 + ",\"employeeId\":" + userId3_2 + ",\"jobId\":" + jobId + "}";
+            ChatResponse response_accept = (ChatResponse) accountAPIFacade.getEmployerEndpoint().acceptEmployee(
+                    request,
+                    Collections.singletonList(
+                            ResponseCheckFactory.getStatusCodeCheck(200)),
+                    testDescription);
+            sa.assertNotNull(response_accept);
+            sa.assertAll();
+
         String request = "{\"selfId\":" + userId2 + ",\"employeeId\":" + userId3_2 + ",\"jobId\":" + jobId + "}";
-        ChatResponse response_cancel = (ChatResponse)accountAPIFacade.getEmployerEndpoint().cancelEmployee(
+        Response response_cancel = (Response) accountAPIFacade.getEmployerEndpoint().cancelEmployee(
                 request,
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(200)),
                 testDescription);
+        sa.assertNotNull(response_cancel);
 
-        SoftAssert sa = new SoftAssert();
+     //   SoftAssert sa = new SoftAssert();
+
+
+        //SHADE-440
+        request = "{\"selfId\":" + userId2 + ",\"employeeId\":" + userId3_2 + ",\"jobId\":" + jobId + "}";
+         Response response_accept2 = (Response) accountAPIFacade.getEmployerEndpoint().acceptEmployee2(
+                    request,
+                    Collections.singletonList(
+                            ResponseCheckFactory.getStatusCodeCheck(200)),
+                    testDescription);
+        sa.assertNotNull(response_accept);
+        sa.assertAll();
 
       /*  sa.assertTrue(response_error.getErrorCode() == 401);
         sa.assertTrue(response_error.getErrorMessage().equals("The employer has already accepted a request to this job."));
@@ -337,7 +416,38 @@ public class AcceptEmployee extends BaseBackendTest {
                 testDescription);
 
 
-     //   TimeUnit.SECONDS.sleep(30);//временный костыль
+        request = "{\"selfId\":" + userId2 + ",\"employeeId\":" + userId3_3 + ",\"jobId\":" + jobId + "}";
+        ChatResponse response_accept = (ChatResponse) accountAPIFacade.getEmployerEndpoint().acceptEmployee(
+                request,
+                Collections.singletonList(
+                        ResponseCheckFactory.getStatusCodeCheck(200)),
+                testDescription);
+        SoftAssert sa = new SoftAssert();
+        sa.assertNotNull(response_accept.getChat());
+        sa.assertNotNull(response_accept.getChat().getId());
+        sa.assertAll();
+
+
+    }
+//-----negativ------------///
+    /**проверка canceljoboffer при условии, что employee уже приналя job offer или отказался от него
+*/
+  /* @Test(priority = 4)
+    public void declineJobOffer() throws IOException, InterruptedException, SQLException {
+
+        String request = "{\"jobId\":" + jobId + "}";
+        Response response_applay = accountAPIFacade.getEmployeeEndpoint().applayJob(
+                request, userId3_3,
+                Collections.singletonList(
+                        ResponseCheckFactory.getStatusCodeCheck(200)),
+                testDescription);
+
+/*
+       Response response_accept = (ChatResponse) accountAPIFacade.getEmployeeEndpoint().declinejob(
+               request,
+               Collections.singletonList(
+                       ResponseCheckFactory.getStatusCodeCheck(200)),
+               testDescription);
 
         request = "{\"selfId\":" + userId2 + ",\"employeeId\":" + userId3_3 + ",\"jobId\":" + jobId + "}";
         ChatResponse response_accept = (ChatResponse) accountAPIFacade.getEmployerEndpoint().acceptEmployee(
@@ -349,17 +459,32 @@ public class AcceptEmployee extends BaseBackendTest {
         sa.assertNotNull(response_accept.getChat());
         sa.assertNotNull(response_accept.getChat().getId());
         sa.assertAll();
-//SHADE-440
-   /*     request = "{\"selfId\":" + userId2 + ",\"employeeId\":" + userId3_2 + ",\"jobId\":" + jobId + "}";
-         response_accept = (ChatResponse) accountAPIFacade.getEmployerEndpoint().acceptEmployee(
+
+
+    }
+/*
+    @Test(priority = 5)
+    public void accemptJobOffer() throws IOException, InterruptedException, SQLException {
+
+        String request = "{\"jobId\":" + jobId + "}";
+        Response response_applay = accountAPIFacade.getEmployeeEndpoint().applayJob(
+                request, userId3_3,
+                Collections.singletonList(
+                        ResponseCheckFactory.getStatusCodeCheck(200)),
+                testDescription);
+
+
+        request = "{\"selfId\":" + userId2 + ",\"employeeId\":" + userId3_3 + ",\"jobId\":" + jobId + "}";
+        ChatResponse response_accept = (ChatResponse) accountAPIFacade.getEmployerEndpoint().acceptEmployee(
                 request,
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(200)),
                 testDescription);
-        sa = new SoftAssert();
+        SoftAssert sa = new SoftAssert();
         sa.assertNotNull(response_accept.getChat());
         sa.assertNotNull(response_accept.getChat().getId());
         sa.assertAll();
-*/
-    }
+
+
+    }*/
 }

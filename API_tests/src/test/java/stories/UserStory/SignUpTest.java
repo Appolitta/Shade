@@ -1,7 +1,7 @@
 package stories.UserStory;
 
 import com.fasterxml.jackson.core.type.TypeReference;
-import org.testng.annotations.AfterClass;
+import org.testng.annotations.*;
 import stories.managers.SettingsManager;
 import stories.model.shademodel.core.Roles;
 import stories.model.shademodel.core.model.accountmodel.UserModel;
@@ -17,9 +17,6 @@ import stories.util.TestDataGenerator;
 import stories.util.ddto.DdtDataProvider;
 import stories.util.ddto.DdtoSet;
 import org.testng.ITestContext;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -98,13 +95,15 @@ public class SignUpTest extends BaseBackendTest {
             groups = {"accountAPIFacade, test-duration.short", "test-state.working"}, priority = 1)
     public void createUserPositive(final Map ddtSetMap)
             throws IOException, SQLException {
-        testCaseId = TEST_NUM + 1;
+       // testCaseId = TEST_NUM + 1;
 
             DdtoSet<UserModel> ddtoSet =
                     mapper.convertValue(ddtSetMap, new TypeReference<DdtoSet<UserModel>>() {
                     });
-            //Sending the API request to the "/account/signup" endpoint and waiting 200 status code
+        testCaseId = ddtoSet.getTestCaseId();
+        //Sending the API request to the "/account/signup" endpoint and waiting 200 status code
             final UserModel createUserRequest = ddtoSet.getDto();
+            testCaseId = ddtoSet.getTestCaseId();
         UserModelResponse response = null;
                      response = (UserModelResponse) accountAPIFacade.getAccountEndpoint().createUser(
                              createUserRequest,
@@ -114,30 +113,6 @@ public class SignUpTest extends BaseBackendTest {
         String test_data =  ddtoSet.getDescription() + "\ncreate user test\nsetId:"
                 + testCaseId + "\n" + ddtoSet.getDescription() + "\n(caseId:" + testCaseId + ")\n[ERROR] ";
 
- /*       //Make checks about the returned information
-        SoftAssert sa = new SoftAssert(test_data);
-        String first_name = response.getShadeUserModelResponse().getFirstName();
-        String last_name = response.getShadeUserModelResponse().getLastName();
-        String email = response.getShadeUserModelResponse().getEmail();
-        String pass = response.getShadeUserModelResponse().getPassword();
-        String user_type = response.getShadeUserModelResponse().getType();
-        int idUser = response.getShadeUserModelResponse().getId();
-        System.out.printf("Создан пользоватьель с ID" + idUser);
-        System.out.printf("login" + email);
-        System.out.printf("password" + pass);
-      /*  if (user_type != 0) {
-            String type = response.getShadeUserModelResponse().getType();
-         sa.assertTrue(Roles.getById(user_type).getRoleDescription().equals(type));
-        }
-*/
-   //     SoftAssert sa = new SoftAssert(test_data);
- /*       sa.assertTrue(response.getAccess_token() != null, test_data);
-        sa.assertTrue(first_name.equals(response.getFirstName()));
-        sa.assertTrue(last_name.equals(response.getLastName()));
-        sa.assertTrue(email.equals(response.getEmail()));
-        userId = response.getAccess_token() != null ? response.getShadeUserModelResponse().getId() : 0;
-        sa.assertAll();
-  */
         //Make checks about the returned information
         SoftAssert sa = new SoftAssert(test_data);
         String first_name = createUserRequest.getFirstName();
@@ -164,12 +139,12 @@ public class SignUpTest extends BaseBackendTest {
             groups = {"accountAPIFacade, test-duration.short", "test-state.working"}, priority = 2)
     public void createUserNegative(final Map ddtSetMap)
             throws IOException, SQLException {
-        testCaseId = TEST_NUM + 1;
+       // testCaseId = TEST_NUM + 1;
 
         DdtoSet<UserModel> ddtoSet =
                 mapper.convertValue(ddtSetMap, new TypeReference<DdtoSet<UserModel>>() {
                 });
-
+        testCaseId = ddtoSet.getTestCaseId();
         //Sending the API request to the "/account/signup" endpoint and waiting 400 status code
         final UserModel createUserRequest = ddtoSet.getDto();
         UserErrorResponse error_response_data = null;
@@ -196,7 +171,7 @@ public class SignUpTest extends BaseBackendTest {
     public void userRegistrationTwice2() throws IOException, InterruptedException, SQLException {
         String test_data = testDescription + "\nuser registration  twice test\n[ERROR] ";
         SoftAssert sa = new SoftAssert(test_data);
-
+        testCaseId = 12608;
         //Create the test user data without the DataProvider
         UserModel newUser = new UserModel();
         newUser.setEmail("test_twise_user2@distillery.com");
@@ -244,7 +219,7 @@ public class SignUpTest extends BaseBackendTest {
     public void userRegistrationTwice3() throws IOException, InterruptedException, SQLException {
         String test_data = testDescription + "\nuser registration  twice test\n[ERROR] ";
         SoftAssert sa = new SoftAssert(test_data);
-
+        testCaseId = 0;
         //Create the test user data without the DataProvider
         UserModel newUser = new UserModel();
         newUser.setEmail("test_twise_user3@distillery.com");

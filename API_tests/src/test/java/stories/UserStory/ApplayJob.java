@@ -5,6 +5,7 @@ import com.jayway.restassured.response.Response;
 import org.testng.ITestContext;
 import org.testng.annotations.*;
 import stories.managers.SettingsManager;
+import stories.model.custom.ErrorResponse;
 import stories.model.shademodel.core.model.accountmodel.UserModel;
 import stories.model.shademodel.core.model.accountmodel.UserModelResponse;
 import stories.model.shademodel.core.model.chatmodel.ChatErrorResponse;
@@ -98,7 +99,7 @@ public class ApplayJob  extends BaseBackendTest{
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(200)),
                 testDescription);
-        System.out.println(" что-нибудь");
+
         userId2 = response.getAccess_token() != null ? response.getShadeUserModelResponse().getId() : 0;
     //  userId2 = 932;
         //----Create Employee
@@ -125,14 +126,10 @@ public class ApplayJob  extends BaseBackendTest{
                 testDescription);
         userId3_2 = response.getAccess_token() != null ? response.getShadeUserModelResponse().getId() : 0;
 
-    //    userId2 = 932;
-    //    userId3_1 = 933;
-     //   userId3_2 = 934;
-    //
-        }
+    }
 
 
-    //    userId3_2 = 871;
+
     @Test (/*description = "Applay Job",
             dataProvider = "applayJob",*/
              priority = 1)
@@ -170,18 +167,15 @@ public class ApplayJob  extends BaseBackendTest{
                 testDescription);
         jobId = responseJob.getId();
 
+        testCaseId = 0;
         String request = "{\"jobId\":" + responseJob.getId() + "}";
         //----Applay The Job
-        Response response_applay  = accountAPIFacade.getEmployeeEndpoint().applayJob(
+        Response response_applay = accountAPIFacade.getEmployeeEndpoint().applayJob(
                 request, userId3_1,
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(200)),
                 testDescription);
-        Response response_applay2  = accountAPIFacade.getEmployeeEndpoint().applayJob(
-                request, userId3_2,
-                Collections.singletonList(
-                        ResponseCheckFactory.getStatusCodeCheck(200)),
-                testDescription);
+
 
       /*  JobErrorResponse response_appled1  = accountAPIFacade.getEmployeeEndpoint().applayJob(
                 request, userId2,
@@ -189,15 +183,34 @@ public class ApplayJob  extends BaseBackendTest{
                         ResponseCheckFactory.getStatusCodeCheck(200)),
                 testDescription);*/
         //----Get Applaed Job
-        String request_appled = "?maxId=" + Integer.toString(responseJob.getId() + 1) + "&sinceId=" + Integer.toString(responseJob.getId() - 1);
-        List<JobFeedModelResponse> response_appled  = accountAPIFacade.getEmployeeEndpoint().applaedJob(
+        String request_appled = "?maxId=" + (jobId + 1) + "&sinceId=" + (jobId- 1);
+        List<JobFeedModelResponse> response_appled = accountAPIFacade.getEmployeeEndpoint().applaedJob(
                 request_appled, userId3_1,
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(200)),
                 testDescription);
 
+        SoftAssert sa = new SoftAssert();
+        accountAPIFacade.getJobEndpoint().checkJobNull(response_appled.get(0));
+        System.out.print(response_appled.get(0).getId());
+        sa.assertNotNull(response_appled.get(0).getId());
 
+        }
 
+        @Test (/*description = "Applay Job",
+            dataProvider = "applayJob",*/
+                priority = 2)
+        public void applayJobBySecondUser() throws IOException, InterruptedException, SQLException {
+
+        testCaseId = 0;
+        String request = "{\"jobId\":" + jobId + "}";
+        Response response_applay2 = accountAPIFacade.getEmployeeEndpoint().applayJob(
+                    request, userId3_2,
+                    Collections.singletonList(
+                            ResponseCheckFactory.getStatusCodeCheck(200)),
+                    testDescription);
+
+        String request_appled = "?maxId=" + (jobId + 1) + "&sinceId=" + (jobId- 1);
         List<JobFeedModelResponse> response_appled2  = accountAPIFacade.getEmployeeEndpoint().applaedJob(
                 request_appled, userId3_2,
                 Collections.singletonList(
@@ -211,20 +224,18 @@ public class ApplayJob  extends BaseBackendTest{
                 testDescription);
 */
         SoftAssert sa = new SoftAssert();
-        accountAPIFacade.getJobEndpoint().checkJobNull(response_appled.get(0));
-        System.out.print(response_appled.get(0).getId());
-        sa.assertNotNull(response_appled.get(0).getId());
+        accountAPIFacade.getJobEndpoint().checkJobNull(response_appled2.get(0));
         System.out.print(response_appled2.get(0).getId());
         sa.assertNotNull(response_appled2.get(0).getId());
     }
 
     @Test (/*description = "Applay Job",
             dataProvider = "applayJob",*/
-            priority = 2)
+            priority = 3)
     public void declinedJob() throws IOException, InterruptedException, SQLException {
         accountAPIFacade = new APIFacade(null, settingsManager.getDefaultBackendSettings());
         settingsManager = SettingsManager.getSettingsManager();
-
+        testCaseId =0;
         String request = "{" +
                 "  \"selfId\":" + userId3_1 +
                 ",  \"jobId\":" + jobId +
@@ -236,7 +247,7 @@ public class ApplayJob  extends BaseBackendTest{
                 testDescription);
 */
 
-        ChatErrorResponse response_decline2 = (ChatErrorResponse) accountAPIFacade.getEmployeeEndpoint().declinejob(
+        ErrorResponse response_decline2 = (ErrorResponse) accountAPIFacade.getEmployeeEndpoint().declinejob(
                 request,
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(400)),

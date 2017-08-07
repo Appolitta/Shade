@@ -20,6 +20,7 @@ import stories.test.BaseBackendTest;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import stories.test.BaseBackendTest;
@@ -84,31 +85,33 @@ public class UpdateUserAboutMe extends BaseBackendTest {
         accountAPIFacade = new APIFacade(null, settingsManager.getDefaultBackendSettings());
         UserModelResponse response = null;
 
-        String test_data = testDescription + "\n create user \n[ERROR] ";
-        SoftAssert sa = new SoftAssert(test_data);
-        //----Create Employer
+
+       //----Create Employer
         //Create the test user data without the DataProvider
         UserModel newUser2 = new UserModel();
-        newUser2.setEmail("test_about_me_user2@distillery.com");
-        newUser2.setFirstName("First");
-        newUser2.setLastName("Petriv");
+        Date time = new Date();
+        String rendom = String.valueOf(time.getTime());
+        newUser2.setEmail("test_about_me_user2" + rendom + "@distillery.com");
+        newUser2.setFirstName("Robin");
+        newUser2.setLastName("Hood");
         newUser2.setPassword("qqqaaa77");
         newUser2.setUserType(2);
-        //Sending the API request to the "/account/signup" endpoint and waiting 200 status code
-        // UserModelResponse response = null;
+
         response = (UserModelResponse) accountAPIFacade.getAccountEndpoint().createUser(
                 newUser2,
                 Collections.singletonList(
                         ResponseCheckFactory.getStatusCodeCheck(200)),
                 testDescription);
-        System.out.println(" что-нибудь");
+
         userId2 = response.getAccess_token() != null ? response.getShadeUserModelResponse().getId() : 0;
 
 
         UserModel newUser3 = new UserModel();
-        newUser3.setEmail("test_about_me_user3@distillery.com");
-        newUser3.setFirstName("First");
-        newUser3.setLastName("Petriv");
+      //  Date time = new Date();
+        //String rendom = String.valueOf(time.getTime());
+        newUser3.setEmail("test_about_me_user3" + rendom + "@distillery.com");
+        newUser3.setFirstName("Littel");
+        newUser3.setLastName("Jon");
         newUser3.setPassword("qqqaaa77");
         newUser3.setUserType(3);
         //Sending the API request to the "/account/signup" endpoint and waiting 200 status code

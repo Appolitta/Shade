@@ -28,44 +28,11 @@ import java.util.Map;
 
 /**
  * Created by weezlabs on 4/3/17.
+ * Delete User before verification
  */
 
-/**
- //  @Test(groups = {"user.delete"})
- //   public class DeleteTest extends BaseBackendTest {
- public class DeleteTest {
- private static final String DELETE_USER = "deleteUser";
- // private Integer userId = 0;
- //   private SettingsManager settingsManager;
-
- private APIFacade accountAPIFacade;
- private DBFacade testDBFacade;
- @BeforeTest
-
- @Test(groups = {"user.delete"}, description = "Check users by email, and return id")
- public Integer CheckUser()
- throws IOException, SQLException {
- //String email = getEmail();
- String email = "test_user@distillery.com";
- System.out.println(email);
- return testDBFacade.getIdUserByEmail(email);
-
- }
-
- //delete
- @Test(groups = {"user.delete"}, description = "Delete users by  id")
- public void deleteUser()
- throws IOException, SQLException {
- Integer IdDell = CheckUser();
- if (IdDell != 0) {
- String IdDellS = Integer.toString(IdDell);
- testDBFacade.UserDBDelete(IdDellS);
- }
- }
 
 
-
- }*/
 
 @Test(groups = {"user.rollback"})
 public class RollbackUser extends BaseBackendTest {
@@ -120,27 +87,8 @@ public class RollbackUser extends BaseBackendTest {
                         Collections.singletonList(ResponseCheckFactory.getStatusCodeCheck(200)),
                         "Deleting user with id: " + IdDell + ".");
 
-       /*         error_response = (UserErrorResponse)accountAPIFacade.getAccountEndpoint().deleteUser(
-                        IdDell,
-                        Collections.singletonList(ResponseCheckFactory.getStatusCodeCheck(200)),
-                        "Deleting user with id: " + IdDell + ".");
-
-                int error_code = error_response.getErrorCode();
-                String error_message = error_response.getErrorMessage();
-                Integer ResponseCode = error_response.hashCode();
-                if(ResponseCode == 200) {
-                    sa.assertTrue((error_code == 105));
-                    sa.assertTrue(error_message.equals("The user does not exist."));
-                }
-                sa.assertAll();
-*/
-
             }
-
-
-
 
         }
     }
-
 }
